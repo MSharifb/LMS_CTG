@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="LMS.Web.WebService.SoapService" CodeBehind="SoapService.svc.cs" %>

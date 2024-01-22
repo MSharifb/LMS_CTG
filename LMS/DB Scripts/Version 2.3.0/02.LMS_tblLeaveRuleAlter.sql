@@ -1,0 +1,1 @@
+alter table LMS_tblLeaveRule add  bitIsIncludeWHForWOP BIT null

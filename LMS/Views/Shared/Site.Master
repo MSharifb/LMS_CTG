@@ -1,0 +1,281 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%--<%@ Import Namespace="Helpers" %>--%>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1" runat="server">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+        <title> Leave Management System &bull; BEPZA </title>
+        <!-- Google Fonts CDN - Open sans | 400, 700 -->
+	    <%--<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">--%>
+
+        <link href="<%= Url.Content("~/Content/css/grid.css") %>" rel="stylesheet" type="text/css" />
+        <link href="<%= Url.Content("~/Content/css/ComponentStyle.css") %>" rel="stylesheet" type="text/css" />
+        <%--<link href="<%= Url.Content("~/Content/css/Site.css") %>" rel="stylesheet" type="text/css" />--%>
+        <link href="<%= Url.Content("~/Content/css/timePicker.css") %>" rel="stylesheet" type="text/css" />
+        <link href="<%= Url.Content("~/Content/css/SiteLayout.css") %>" rel="stylesheet" type="text/css" />
+
+        <link href="<%= Url.Content("~/Content/css/alert.css") %>" rel="stylesheet" type="text/css" />
+        <link href="<%= Url.Content("~/Content/css/jquery.autocomplete.css") %>" rel="stylesheet" type="text/css" />
+        <link href="<%= Url.Content("~/Scripts/jquery-autocomplete/jquery.autocomplete.css") %>" rel="stylesheet" type="text/css" /> 
+        <link href="<%= Url.Content("~/Scripts/jquery-ui-1.7.2/themes/redmond/jquery-ui-1.7.2.custom.css") %>" rel="stylesheet" type="text/css" />
+        
+        <!-- jQuery UI CSS -->
+        <%--<link href="<%= Url.Content("~/Content/css/jquery-ui.min.css?ver=1.12.0") %>" rel="stylesheet" type="text/css" />--%>
+    
+        <!-- Bootstrap -->
+	    <link rel="stylesheet" href="<%= Url.Content("~/Content/css/bootstrap.min.css?ver=3.3.7") %>">
+	
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="<%= Url.Content("~/Content/css/font-awesome.min.css?ver=4.6.3") %>">
+
+        <link href="<%= Url.Content("~/Content/css/ContentLayout.css") %>" rel="stylesheet" type="text/css" />
+
+        <!-- Project CSS -->
+        <link rel="stylesheet" href="<%= Url.Content("~/Content/css/project.css?ver=1.0.0") %>">
+
+        <style type="text/css">
+            #status-line {
+                position: absolute;
+                left: 33%;
+                right: 33%;
+                width: 1px;
+                white-space: nowrap;
+                display: table;
+                margin: auto;
+                padding: 5px 10px 5px 10px;
+                text-align: center;
+            }
+        </style>
+
+        <!-- jQuery Library -->
+        <%--<script src="<%= Url.Content("~/Content/js/jquery.min.js?ver=1.12.0") %>" type="text/javascript"></script>--%>
+
+        <!-- jQuery UI Library -->
+        <%--<script src="<%= Url.Content("~/Content/js/jquery-ui.min.js?ver=1.12.1") %>" type="text/javascript"></script>--%>
+    
+        <script src="<%= Url.Content("~/Scripts/Alert/alert.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/Alert/js-core.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/jquery-1.3.2.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/Utility.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/jquery-ui-1.7.2/ui/ui.datepicker.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/jPrint.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/jquery.timePicker.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/date-util.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/ui-validation.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/jquery-ui-1.7.2.custom.min.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/jquery.tablehover.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/Jquery.cooke.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/jquery.blockUI.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/jquery.bgiframe.min.js")%>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/jquery.form.js")%>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/NumberToWord.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/jquery-ui-timepicker-addon.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/jquery.autocomplete.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/jquery.autocomplete.min.js") %>" type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/jquery-autocomplete/jquery.autocomplete.pack.js") %>" type="text/javascript"></script>
+    
+        <script type="text/javascript">
+
+            function ClearCooke() {
+                $.cookie("childmenu", null);
+                return true;
+            }
+
+            jQuery(document).ready(function () {
+                $(".with-date-picker").datepicker();
+
+                if ($('#status-line').is(':visible')) {
+                    setTimeout(function () {
+                        $('#status-line').fadeOut('slow');
+                    }, 9000);
+                }
+
+
+            });
+
+            function PopulateData(strUrl, childMenuId, parentMenuId, cmenuname) {
+
+               var intLeaveYearId = $('#leaveYearId').val();
+                var childmenu = strUrl.split("/")[2];
+               // if (intLeaveYearId > 0 || childmenu == 'Initialization' || childmenu == 'LeaveYear') {
+                if (intLeaveYearId > 0 || childmenu == 'Initialization' || childmenu == 'LeaveYearType' || childmenu == 'LeaveYear') {
+                    $.ajax({
+                        url: strUrl,
+                        type: 'GET',
+                        dataType: 'text',
+                        timeout: 5000,
+                        error: function () {
+                            alert('System is unable to load data please try again.');
+                        },
+                        success: function (result) {
+                            $('#divDataList').html(result);
+
+                        }
+                    });
+
+                    RemoveClassFromAllLi();
+
+                    $('#' + childMenuId).addClass('selected');
+                    $('#' + parentMenuId).addClass('selected');
+
+                    $.cookie("childmenu", cmenuname);
+
+
+                    var pagetitle = $('#' + childMenuId).find('a').text();
+                    document.title = pagetitle;
+
+                    var pagename = strUrl.split("/")[2];
+                    window.location.hash = pagename;
+                    window.scrollTo(0, 0);
+                }
+    //            else {
+    //                alert('Please add active leave year');
+    //            }
+
+                return false;
+            }
+
+            function RemoveClassFromAllLi() {
+                $('li').removeClass('selected');
+            }
+                  
+        </script>
+    
+    </head>
+    <body>
+
+	    <header id="site-header">
+		    <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img class="navbar-logo" src="<%= Url.Content("~/Content/img/bepza-logo.png") %>" alt="Logo">
+                    <span class="navbar-branding">
+                        <span class="brand-text">
+                           Enterprise Resource Planning
+                        </span>
+                        <small class="brand-secondary-text">
+                            Chattogram EPZ Medical Hospital
+                        </small>
+                    </span>
+                    <!-- /.navbar-branding -->
+                </a>
+                <!-- /.navbar-brand -->
+            </div>
+            <!-- /.navbar-header -->
+
+            <% if (LMS.Web.LoginInfo.Current.ShowMenus) { %>
+            <div id="Div1">
+                <% Html.RenderPartial("LogOnUserControl"); %>
+            </div>
+            <% } %>
+
+	    </header>
+	    <!-- /#site-header -->
+
+	    <aside id="sidebar">
+            <% if (LMS.Web.LoginInfo.Current.ShowMenus) { %>
+                <div id="main-menu">
+                    <ul class="menu">
+                        <%= Html.Action("Header", "Menu") %>
+                    </ul>
+                </div>
+                <!-- /#main-menu -->
+            <% } %>
+	    </aside>
+	    <!-- /#sidebar -->
+
+	    <div id="body">
+            <div id="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+                <div id="divEmpList"></div>
+            
+                <% if (Session["firstUrl"] != null) { %>
+                    <%=Html.Hidden("firstmenuUrl", Session["firstUrl"].ToString()) %>
+                <% } %>
+                <%                       
+                    if (string.Compare(LMS.Web.AppConstant.SysInitializer.Trim(), HttpContext.Current.User.Identity.Name.Trim(), true) == 0)
+                    {%>
+                <%=Html.Hidden("leaveYearId", 5000)%>
+                <%}
+                    else if (HttpContext.Current.Session["LoginInfo"] != null && HttpContext.Current.User.Identity.IsAuthenticated)
+                    {%>
+                <%=Html.Hidden("leaveYearId", LMS.Web.LoginInfo.Current.intLeaveYearID)%>
+                <%}
+                    else
+                    {%>
+                <%=Html.Hidden("leaveYearId", 0)%>
+                <%}%>
+            </div>
+            
+            <footer id="site-footer" class="text-center">
+			    Copyright ©  <span><a href="https://www.bepza.gov.bd/" target="_blank">
+                    <span style="color: #ff0000;font-weight: bold;">BEPZA</span></a>, </span>  Maintained By BEPZA MIS
+		    </footer>
+	    </div>
+	    <!-- /#body -->
+
+        <%--<form id="frmMain" action="" >--%>
+        <% if (this.Request.IsAuthenticated) {
+           
+            int sessionDialogWait = 1 * 60 * 1000 - 60 * 500; // ms = 0.5 minutes
+            int sessionTimeout = (LMS.Web.AppConstant.SessionTimeout - 1) * 60 * 1000; //LMS.Web.AppConstant.SessionTimeout=60, ms = 59 minutes %>
+        
+            <script type="text/javascript">
+                var logoutTimer = null,
+                    sessionTimer = null,
+                    sessionTimeout = Number('<%= sessionTimeout %>'),
+                    sessionDialogWait = Number('<%= sessionDialogWait %>');
+
+                $(document).ready(function () {
+                    $('#sessionEndDialog').dialog({
+                        autoOpen: false,
+                        bgiframe: true,
+                        modal: true,
+                        buttons: {
+                            //                OK: function () {
+                            //                    $(this).dialog('close');
+                            //                    $.get('<%= Url.Action( "Index", "Home" ) %>', scheduleSessionPrompt, 'html');
+                            //                },
+                            Logout: logoutOnSessionExpires
+                        }
+                    }).ajaxStart(function () { scheduleSessionPrompt(); });
+                    scheduleSessionPrompt();
+                });
+
+                function scheduleSessionPrompt() {
+                    if (logoutTimer) clearTimeout(logoutTimer);
+                    if (sessionTimer) clearTimeout(sessionTimer);
+
+                    sessionTimer = setTimeout(sessionExpiring, sessionTimeout);
+                }
+
+                function sessionExpiring() {
+                    logoutTimer = setTimeout(logoutOnSessionExpires, sessionDialogWait);
+                    $('#sessionEndDialog').dialog('open');
+                }
+
+                function logoutOnSessionExpires() {
+                    window.location.href = '<%= Url.Action( "Logoff", "Account" ) %>';
+                }       
+
+            </script>
+        <% } %>
+
+        <div id="sessionEndDialog" title="Session Expiring" style="display: none;">
+            <%--OK to renew your session or --%>
+            <p>Your session is about to expire. The application is going to logout withing few seconds. Click Logout to logout of the application.</p>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <%--<script src="<%= Url.Content("~/Content/js/bootstrap.min.js?ver=3.3.7") %>" type="text/javascript"></script>--%>
+
+        <!-- SlimScroll jQuery Library -->
+        <%--<script src="<%= Url.Content("~/Content/js/jquery.slimscroll.min.js?ver=1.0.6") %>" type="text/javascript"></script>--%>
+
+        <!-- Project-specific Common scripts -->
+        <script src="<%= Url.Content("~/Content/js/project.js?ver=1.0.0") %>" type="text/javascript"></script>
+    </body>
+</html>

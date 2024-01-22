@@ -1,0 +1,1039 @@
+﻿.sectionCaption
+{
+	width: 195px;
+	float: left;
+	text-align: left;
+	position: relative;
+	vertical-align: middle;
+	overflow: visible;
+	display:block;
+	color:Gray;
+	font-size:large;
+}
+
+form
+{
+    padding:0px;
+    margin:0;
+}
+
+.logoMG
+{
+    background-image:url(../../Content/img/MGLogo.jpg);
+    height:42px;
+    width:302px;
+    display:block;
+    overflow:hidden;
+    cursor:default;
+}
+.labelLogin
+{
+    /* font-family:Tahoma; */
+    font-size:11pt;
+    font-weight:bold;
+    width:160px;
+    color:#3f6697;
+}
+.textLogin
+{
+    /* font-family:Tahoma; */
+    font-size:small;
+    color:#3f6697;
+    font-weight:bold;
+    border-style:solid;
+    border-width:1px;
+    border-color:#C5D3E4;
+    height:20px;
+    width:225px;
+}
+.textCommonSearch
+{
+    /* font-family:Tahoma; */
+    font-size:small;
+    color:#3f6697;
+    font-weight:bold;
+    border-style:solid;
+    border-width:1px;
+    border-color:#C5D3E4;
+    height:20px;
+    width:180px;
+    
+}
+
+.labelRegular
+{
+	font-size:12pt;
+ 
+}
+.labelRequired
+{
+	font-size:12pt;
+	color:Red;
+
+}
+.labelMessage
+{
+	font-size:12pt;
+	font-weight:bold;	 
+}
+
+.textRegular
+{
+    /* font-family:arial,sans-serif;
+    font-size:11pt; */
+    width:200px;
+    border:1px solid #DDDDDD;
+}
+.textRegularTime
+{
+    /* font-family:arial,sans-serif;
+    font-size:10pt; */
+    width:70px;
+    border:1px solid #DDDDDD;
+}
+
+.textRegularDuration
+{
+    /* font-family:arial,sans-serif;
+    font-size:10pt; */
+    width:40px;
+    border:1px solid #DDDDDD;
+}
+.textRegularDate
+{
+    /* font-family:arial,sans-serif;
+    font-size:11pt; */
+    width:100px;
+    border:1px solid #DDDDDD;
+}
+
+.textRegularOutOfOffice
+{
+    /* font-family:arial,sans-serif; */
+    font-size:11pt;
+    width:120px;
+    border:1px solid #DDDDDD;
+}
+
+.textRegularNumber
+{
+    /* font-family:arial,sans-serif; */
+    font-size:11pt;
+    width:100px;
+    text-align:right;
+    border:1px solid #DDDDDD;
+}
+.textRegularLarge
+{
+    /* font-family:arial,sans-serif; */
+    font-size:11pt;
+    width:644px;
+     
+    border:1px solid #DDDDDD;
+}
+
+.textRegCustomWidth
+{
+    /* font-family:arial,sans-serif; */
+    font-size:11pt;     
+    border:1px solid #DDDDDD;
+}
+
+.textLabelLike
+{
+    border:0px;    
+    display: block;
+    
+}
+.ddlRegularDate
+{
+    /* font-family:arial,sans-serif; */
+    font-size:11pt;
+    width:120px;
+    border:1px solid #DDDDDD;
+}
+
+.assortColor
+{
+    width:100%;
+    text-align:left;
+    border:0px;
+    font-weight:bold;
+    /* font-family:arial,sans-serif; */
+    font-size:12pt;
+}
+
+.assortSize
+{
+    width:100%;
+    text-align:right;
+    border:0px;
+    /* font-family:arial,sans-serif; */
+    font-size:12pt;
+}
+
+.assortTotal
+{
+    width:100%;
+    text-align:right;
+    border:0px;
+    /* font-family:arial,sans-serif; */
+    font-size:12pt;
+}
+
+.assortFooter
+{
+    width:100%;
+    text-align:right;
+    border:0px;
+    /* font-family:arial,sans-serif; */
+    font-size:12pt;
+    font-weight:bold;
+    color:Blue;
+}
+
+.assortFooterGrandTotal
+{
+    width:100%;
+    text-align:right;
+    border:0px;
+    /* font-family:arial,sans-serif; */
+    font-size:12pt;
+    font-weight:bold;
+    color:Green;
+}
+
+.gridTextBoxLeftAligned
+{
+    width:100%;
+    text-align:left;
+    border:solid 1px #C5D3E4;
+    /* font-family:arial,sans-serif; */
+    font-size:12pt;
+}
+
+.gridTextBoxRightAligned
+{
+    width:100%;
+    text-align:right;
+    border:solid 1px #C5D3E4;
+    /* font-family:arial,sans-serif; */
+    font-size:12pt;
+}
+
+.gridTextBoxCenterAligned
+{
+    width:100%;
+    text-align:center;
+    border:solid 1px #C5D3E4;
+    /* font-family:arial,sans-serif; */
+    font-size:12pt;
+}
+
+.packID
+{
+    width:100%;
+    text-align:left;
+    border:0px;
+    font-weight:bold;
+    /* font-family:arial,sans-serif; */
+    font-size:12pt;
+}
+
+.packColor
+{
+    width:100%;
+    text-align:left;
+    border:0px;
+    font-weight:bold;
+    /* font-family:arial,sans-serif; */
+    font-size:12pt;
+}
+
+.packSize
+{
+    width:100%;
+    text-align:right;
+    border:0px;
+    /* font-family:arial,sans-serif; */
+    font-size:12pt;
+}
+
+.packTotal
+{
+    width:100%;
+    text-align:right;
+    border:0px;
+    /* font-family:arial,sans-serif; */
+    font-size:12pt;
+}
+
+.textAreaRegular
+{
+    /* font-family:arial,sans-serif; */
+    font-size:12pt;
+    width:200px;
+    height:60px;
+    border:1px solid #DDDDDD;
+}
+.textAreaLarge
+{
+    /* font-family:arial,sans-serif; */
+    font-size:12pt;
+    width:644px;
+    height:57px;
+    border:1px solid #DDDDDD;
+}
+
+.HighlightBox
+{
+    background-color:#BCE954;
+}
+.HighlightBox2
+{
+    background-color:#BDEDFF;
+}
+
+.selectBoxRegular
+{
+   /* font-family:arial,sans-serif;
+    font-size:12pt; */
+    width:202px;
+    border:1px solid #DDDDDD;
+}
+
+.selectBoxLarge
+{
+    /* font-family:arial,sans-serif;
+    font-size:12pt; */
+    width:380px;
+    border:1px solid #DDDDDD;
+}
+.selectBoxMedium
+{
+    /* font-family:arial,sans-serif;
+    font-size:12pt; */
+    width:101px;
+    border:1px solid #DDDDDD;
+}
+
+.selectBoxForGrid
+{
+    /* font-family:arial,sans-serif;
+    font-size:12pt; */
+    width:100%;
+    border:1px solid #C5D3E4;
+}
+.selectBoxRegularCustomWidth
+{
+    /* font-family:arial,sans-serif;
+    font-size:12pt; */
+     
+    border:1px solid #DDDDDD;
+}
+.CheckBoxClass
+{
+     border:1px solid #DDDDDD;
+}
+
+table.tableRegular 
+{
+	border-width: 1px;
+	border-spacing: 0px;
+	border-style: solid;
+	border-color: #dddddd;
+	background-color: #ffffff;
+	/* font-family:arial,sans-serif;
+    font-size:11pt; */
+    width:100%;
+}
+table.tableRegular th 
+{
+    border-color: #dddddd;
+    border-style: solid;
+	border-width: 1px;
+	padding: 1px 2px 1px 2px;
+	background-color: #e7eef6;
+}
+
+
+table.tableRegular tr 
+{
+    border-color: #dddddd;
+    border-style: solid;
+	border-width: 1px;
+	padding: 1px 2px 1px 2px;
+	background-color: #ffffff;
+}
+
+
+
+table.tableBorderLess 
+{
+    border:1px;
+	border-width: 0px;
+	border-color:Red;
+	border-spacing: 0px;
+	background-color: #ffffff;
+	/* font-family:arial,sans-serif; */
+    font-size:11pt;
+    width:100%;
+}
+table.tableBorderLess th 
+{
+    border:1px;
+	border-width: 0px;
+	border-color:Red;
+	padding: 1px 2px 1px 2px;
+	background-color: #e7eef6;
+}
+
+
+table.tableBorderLess tr 
+{
+    border:1px;
+	border-width: 0px;
+	padding: 1px 2px 1px 2px;
+	background-color: #ffffff;
+}
+
+
+table.grid 
+{
+	border-width: 1px;
+	border-spacing: 0px;
+	border-style: solid;
+	border-color: #dddddd;
+	background-color: #ffffff;
+	/* font-family:arial,sans-serif; */
+    font-size:11pt;
+    width:100%;
+}
+table.grid th 
+{
+    border-color: #dddddd;
+    border-style: solid;
+	border-width: 1px;
+	padding: 1px 2px 1px 2px;
+	background-color: #e7eef6;
+}
+table.grid tr
+{
+    border-color: #dddddd;
+    border-style: solid;
+	border-width: 1px;
+	padding: 1px 2px 1px 2px;
+}
+.hover
+{
+	background-color: #E0ECF8
+}
+
+.getInImage
+{
+     background-image:url(../../Content/img/controls/btn_in.gif);
+    height:16px;
+    width:16px;
+    display:block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.getOutImage
+{
+     background-image:url(../../Content/img/controls/btn_out.gif);
+    height:16px;
+    width:16px;
+    display:block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+/*
+.gridrow
+{
+    background-color: #ffffff;
+}
+.gridrow_alternate
+{
+	background-color: #E0ECF8
+}
+*/
+
+/* grid buttons */
+.gridAdd
+{
+    background-image:url(../../Content/img/controls/gridAdd.gif);
+    height:14px;
+    width:16px;
+    display:block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.gridEdit
+{
+    background-image:url(../../Content/img/controls/gridEdit.gif);
+    height:14px;
+    width:16px;
+    display:block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.gridUpdate
+{
+    background-image:url(../../Content/img/controls/gridUpdate.gif);
+    height:14px;
+    width:16px;
+    display:block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.gridDelete
+{
+    background-image:url(../../Content/img/controls/gridDelete.gif);
+    height:14px;
+    width:16px;
+    display:block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.gridCopy
+{
+    background-image:url(../../Content/img/controls/gridCopy.gif);
+    height:14px;
+    width:16px;
+    display:block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.gridView
+{
+    background-image:url(../../Content/img/controls/gridView.gif);
+    height:14px;
+    width:16px;
+    display:block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.gridApprove
+{
+    background-image:url(../../Content/img/controls/gridApprove.gif);
+    height:14px;
+    width:16px;
+    display:block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.gridApprover
+{
+    background-image:url(../../Content/img/controls/gridApprover.gif);
+    height:14px;
+    width:16px;
+    display:block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+
+/* grid buttons */
+
+/* form buttons */
+
+.btnAttachment
+{
+    background-image:url(../../Content/img/attachment.gif);
+    height:20px;
+    width:18px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+    background-repeat:no-repeat;
+}
+    
+.btnReverify
+{
+   background-image:url(../../Content/img/controls/btn_Reverify.gif);
+    height:25px;
+    width:73px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+    background-repeat:no-repeat;
+}
+
+
+.btnDraft
+{
+   background-image:url(../../Content/img/controls/btn_Draft.gif);
+    height:25px;
+    width:75px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+    background-repeat:no-repeat;
+}
+
+.btnPermittedAndVerified
+{
+   background-image:url(../../Content/img/controls/btn_PermittedVerified.gif);
+    height:25px;
+    width:138px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+    background-repeat:no-repeat;
+}
+
+.btnOk
+{
+   background-image:url(../../Content/img/controls/btn_OK.gif);
+    height:25px;
+    width:75px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+    background-repeat:no-repeat;
+}
+
+.btnPaid
+{
+  background-image:url(../../Content/img/controls/btn_Paid.gif);
+    height:25px;
+    width:75px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+    background-repeat:no-repeat;
+}
+
+.btnPermission
+{
+  background-image:url(../../Content/img/controls/btn_Permitted.gif);
+    height:25px;
+    width:75px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+    background-repeat:no-repeat;
+}
+
+.btnVerify
+{
+  background-image:url(../../Content/img/controls/btn_Verified.gif);
+    height:25px;
+    width:75px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+    background-repeat:no-repeat;
+}
+
+.btnDownArrow
+{
+  background-image:url(../../Content/img/controls/Down-Arrow.gif);
+    height:25px;
+    width:20px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+    background-repeat:no-repeat;
+}
+
+.btnRightArrow
+{
+  background-image:url(../../Content/img/controls/Right-Arrow.gif);
+    height:25px;
+    width:20px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+    background-repeat:no-repeat;
+}
+.btnNewGetOut
+{
+     background-image:url(../../Content/img/controls/btn_NewOutofOfficeDocument.gif);
+    height:25px;
+    width:180px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.btnGetIn
+{
+     background-image:url(../../Content/img/controls/btn_GetIn.gif);
+    height:25px;
+    width:72px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.btnGetOut
+{
+    background-image:url(../../Content/img/controls/btn_GetOut.gif);
+    height:25px;
+    width:72px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+    
+}
+.btnAdd
+{
+    background-image:url(../../Content/img/controls/btn_Add.gif);
+    height:25px;
+    width:72px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.btnUpdate
+{
+    background-image:url(../../Content/img/controls/btn_Update.gif);
+    height:25px;
+    width:72px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.btnDelete
+{
+    background-image:url(../../Content/img/controls/btn_Delete.gif);
+    height:25px;
+    width:72px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.btnSave
+{
+    background-image:url(../../Content/img/controls/btn_Save.gif);
+    height:25px;
+    width:70px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.btnPrint
+{
+    background-image:url(../../Content/img/controls/btn_Print.gif);
+    height:25px;
+    width:70px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.btnPrintPreview
+{
+    background-image:url(../../Content/img/controls/btn_PrintPreview.gif);
+    height:25px;
+    width:87px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.btnProcess
+{
+    background-image:url(../../Content/img/controls/btn_Process.gif);
+    height:25px;
+    width:70px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.btnRollback
+{
+    background-image:url(../../Content/img/controls/btn_Rollback.gif);
+    height:25px;
+    width:70px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.btnSubmit
+{
+    background-image:url(../../Content/img/controls/btn_Submit.gif);
+    height:25px;
+    width:70px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.btnReject
+{
+    background-image:url(../../Content/img/controls/btn_Reject.gif);
+    height:25px;
+    width:70px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.btnApproved
+{
+    background-image:url(../../Content/img/controls/btn_Approved.gif);
+    height:25px;
+    width:70px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.btnRecommended
+{
+    background-image:url(../../Content/img/controls/btn_Recommended.gif);
+    height:25px;
+    width:121px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.btnApprove
+{
+    background-image:url(../../Content/img/controls/btn_Approve.gif);
+    height:25px;
+    width:70px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.btnRecommend
+{
+    background-image:url(../../Content/img/controls/btn_Recommend.gif);
+    height:25px;
+    width:87px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.btnForward
+{
+    background-image:url(../../Content/img/controls/btn_Forward.gif);
+    height:25px;
+    width:70px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.btnSearch
+{
+    background-image:url(../../Content/img/controls/btn_search.gif);
+    height:16px;
+    width:16px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.btnAddNew
+{
+    background-image:url(../../Content/img/controls/gridAdd.gif);
+    height:16px;
+    width:16px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+
+
+.btnSearchData
+{
+    background-image:url(../../Content/img/controls/btn_SearchData.gif);
+    height:26px;
+    width:70px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.btnCalculate
+{
+    background-image:url(../../Content/img/controls/btn_Calculate.gif);
+    height:25px;
+    width:72px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.btnClear
+{
+    background-image:url(../../Content/img/controls/btn_Clear.gif);
+    height:25px;
+    width:72px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.btnLogin
+{
+    background-image:url(../../Content/img/controls/btn_login.gif);
+    height:25px;
+    width:72px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.btnElipse
+{
+    background-image:url(../../Content/img/controls/btn_Elipse.gif);
+    height:25px;
+    width:25px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.btnBack
+{
+    background-image:url(../../Content/img/controls/btn_Back.gif);
+    height:25px;
+    width:70px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+.btnSaveAndAddAnother
+{
+    background-image:url(../../Content/img/controls/btn_SaveAndAddAnother.gif);
+    height:25px;
+    width:125px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.btnCancel
+{
+    background-image:url(../../Content/img/controls/btn_Cancel.gif);
+    height:25px;
+    width:72px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+
+.btnNewLeaveApplication
+{
+    background-image:url(../../Content/img/controls/btn_NewLeaveApplication.gif);
+    height:25px;
+    width:121px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+
+.btn
+{    
+    height:25px;
+    width:137px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.btnClose
+{
+    background-image:url(../../Content/img/controls/btn_Close.gif);
+    height:25px;
+    width:72px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.btnView
+{
+    background-image:url(../../Content/img/controls/btn_View.gif);
+    height:25px;
+    width:72px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.btnPreview
+{
+    background-image:url(../../Content/img/controls/btn_Preview.gif);
+    height:25px;
+    width:72px;
+    display:inline-block;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.buttonTeaser
+{
+    background: transparent url(../../Content/img/controls/buttonBackground.png) no-repeat left center;
+    border: 1px solid #fff;    
+    cursor: pointer;
+    /* font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; */
+    font-size:0.916em;
+    font-weight: bold;
+    text-decoration:none;
+    margin: 0 4px;
+    padding: 2px 4px;
+    text-transform: uppercase;
+    outline: 1px solid #9BABB0;
+    -moz-border-radius: 4px;
+    -moz-outline-radius: 4px;
+    -webkit-border-radius: 4px;
+    color:#ffffff;
+}
+.buttonTeaser:hover
+{
+    background-position: right center;
+    cursor: pointer;
+    text-decoration:none;
+}
+
+.GetInShow()
+{
+    display:block;    
+}
+
+.GetInHide()
+{
+    display:none;    
+}
+/* form buttons */
+
+
+#divLoading
+{
+	background-color: #CF4342;
+	color: White;
+	height: 23px;
+	width: 73px;
+	padding-top: 3px;
+}
+
+
+
+#divSearchData
+{
+	  border: 1px solid #fff;    
+}
+
+#spanLoading
+{
+	color: #fff;
+	font-weight: bold;
+	padding-left: 6px;
+}
+
+
+
+#lblTotalRows
+{
+	font-weight: bold;
+	
+	
+	}

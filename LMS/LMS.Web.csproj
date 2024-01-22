@@ -1,0 +1,1215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30C2019E-957E-408C-BF97-320967BE6B4A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LMS</RootNamespace>
+    <AssemblyName>LMS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress>true</Use64BitIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>C:\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib, Version=2.0.34.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Others\BEPZA_LMS\LMS_BEPZA\LMS.Web\lib\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="PrimaryBaseLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Others\BEPZA_LMS\LMS_BEPZA\LMS.Web\lib\PrimaryBaseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Others\BEPZA_LMS\LMS_BEPZA\MvcPaging\bin\Debug\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Connected Services\UserMgtService\LMS.UserMgtService.Application.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserMgtService\LMS.UserMgtService.Dashboard.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserMgtService\LMS.UserMgtService.Department.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserMgtService\LMS.UserMgtService.Employee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserMgtService\LMS.UserMgtService.GetSearchEmployeeWithPagingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserMgtService\LMS.UserMgtService.Menu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserMgtService\LMS.UserMgtService.Module.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserMgtService\LMS.UserMgtService.Right.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserMgtService\LMS.UserMgtService.Role.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserMgtService\LMS.UserMgtService.RoleGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserMgtService\LMS.UserMgtService.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserMgtService\LMS.UserMgtService.UserGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserMgtService\LMS.UserMgtService.UserMenu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserMgtService\LMS.UserMgtService.UserRoleInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserMgtService\LMS.UserMgtService.Zone.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\UserMgtService\UserManagementService.disco" />
+    <None Include="Connected Services\UserMgtService\configuration91.svcinfo" />
+    <None Include="Connected Services\UserMgtService\configuration.svcinfo" />
+    <None Include="Connected Services\UserMgtService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Content\ajax-loader.gif" />
+    <Content Include="Content\bg-header.png" />
+    <Content Include="Content\bg-inner-corners.png" />
+    <Content Include="Content\bg-main-corner-sprite.png" />
+    <Content Include="Content\bg-main.png" />
+    <Content Include="Content\bg-nav-corner-sprite.png" />
+    <Content Include="Content\bg-nav-side-sprite.png" />
+    <Content Include="Content\css\alert.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\ComponentStyle.css" />
+    <Content Include="Content\css\ContentLayout.css" />
+    <Content Include="Content\css\fileuploader.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\grid.css" />
+    <Content Include="Content\css\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\css\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Content\css\jquery-ui.css" />
+    <Content Include="Content\css\jquery-ui.min.css" />
+    <Content Include="Content\css\jquery.autocomplete.css" />
+    <Content Include="Content\css\jquery.ui.all.css" />
+    <Content Include="Content\css\jquery.ui.autocomplete.css" />
+    <Content Include="Content\css\jquery.ui.base.css" />
+    <Content Include="Content\css\PrintStyle.css" />
+    <Content Include="Content\css\project.css" />
+    <Content Include="Content\css\PStyles.css" />
+    <Content Include="Content\css\Site.css" />
+    <Content Include="Content\css\SiteLayout.css" />
+    <Content Include="Content\css\timePicker.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\OpenSans-Bold.svg" />
+    <Content Include="Content\fonts\OpenSans-Regular.svg" />
+    <Content Include="Content\img\alert\alt_bg.png" />
+    <Content Include="Content\img\alert\button.jpg" />
+    <Content Include="Content\img\alert\button_selected.jpg" />
+    <Content Include="Content\img\asc.png" />
+    <Content Include="Content\img\attachment.gif" />
+    <Content Include="Content\img\bepza-logo.png" />
+    <Content Include="Content\img\busy.gif" />
+    <Content Include="Content\img\controls\btn_Add.gif" />
+    <Content Include="Content\img\controls\btn_Approve.gif" />
+    <Content Include="Content\img\controls\btn_Approved.gif" />
+    <Content Include="Content\img\controls\btn_Back.gif" />
+    <Content Include="Content\img\controls\btn_Calculate.gif" />
+    <Content Include="Content\img\controls\btn_Cancel.gif" />
+    <Content Include="Content\img\controls\btn_Clear.gif" />
+    <Content Include="Content\img\controls\btn_Close.gif" />
+    <Content Include="Content\img\controls\btn_Delete.gif" />
+    <Content Include="Content\img\controls\btn_Draft.gif" />
+    <Content Include="Content\img\controls\btn_Elipse.gif" />
+    <Content Include="Content\img\controls\btn_Elipse_small.gif" />
+    <Content Include="Content\img\controls\btn_Forward.gif" />
+    <Content Include="Content\img\controls\btn_GetIn.gif" />
+    <Content Include="Content\img\controls\btn_GetOut.gif" />
+    <Content Include="Content\img\controls\btn_in.gif" />
+    <Content Include="Content\img\controls\btn_login.gif" />
+    <Content Include="Content\img\controls\btn_NewLeaveApplication.gif" />
+    <Content Include="Content\img\controls\btn_NewOutofOfficeDocument.gif" />
+    <Content Include="Content\img\controls\btn_OK.gif" />
+    <Content Include="Content\img\controls\btn_out.gif" />
+    <Content Include="Content\img\controls\btn_Paid.gif" />
+    <Content Include="Content\img\controls\btn_Permission.gif" />
+    <Content Include="Content\img\controls\btn_Permitted.gif" />
+    <Content Include="Content\img\controls\btn_PermittedVerified.gif" />
+    <Content Include="Content\img\controls\btn_Preview.gif" />
+    <Content Include="Content\img\controls\btn_Print.gif" />
+    <Content Include="Content\img\controls\btn_PrintPreview.gif" />
+    <Content Include="Content\img\controls\btn_Process.gif" />
+    <Content Include="Content\img\controls\btn_Recommend.gif" />
+    <Content Include="Content\img\controls\btn_Recommended.gif" />
+    <Content Include="Content\img\controls\btn_Reject.gif" />
+    <Content Include="Content\img\controls\btn_Reverify.gif" />
+    <Content Include="Content\img\controls\btn_Rollback.gif" />
+    <Content Include="Content\img\controls\btn_Save.gif" />
+    <Content Include="Content\img\controls\btn_SaveAndAddAnother.gif" />
+    <Content Include="Content\img\controls\btn_search.gif" />
+    <Content Include="Content\img\controls\btn_SearchData.gif" />
+    <Content Include="Content\img\controls\btn_Submit.gif" />
+    <Content Include="Content\img\controls\btn_Update.gif" />
+    <Content Include="Content\img\controls\btn_Verified.gif" />
+    <Content Include="Content\img\controls\btn_Verify.gif" />
+    <Content Include="Content\img\controls\btn_View.gif" />
+    <Content Include="Content\img\controls\buttonBackground.png" />
+    <Content Include="Content\img\controls\calendar-blue.gif" />
+    <Content Include="Content\img\controls\Clock2.PNG" />
+    <Content Include="Content\img\controls\commonSearchButton.png" />
+    <Content Include="Content\img\controls\date.gif" />
+    <Content Include="Content\img\controls\Down-Arrow.gif" />
+    <Content Include="Content\img\controls\getInArrow.jpg" />
+    <Content Include="Content\img\controls\getInArrow.png" />
+    <Content Include="Content\img\controls\getOutArrow.jpg" />
+    <Content Include="Content\img\controls\getOutArrow.png" />
+    <Content Include="Content\img\controls\gridAdd.gif" />
+    <Content Include="Content\img\controls\gridApprove.gif" />
+    <Content Include="Content\img\controls\gridApprover.gif" />
+    <Content Include="Content\img\controls\gridCopy.gif" />
+    <Content Include="Content\img\controls\gridDelete.gif" />
+    <Content Include="Content\img\controls\gridEdit.gif" />
+    <Content Include="Content\img\controls\gridUpdate.gif" />
+    <Content Include="Content\img\controls\gridView.gif" />
+    <Content Include="Content\img\controls\img.gif" />
+    <Content Include="Content\img\controls\MGText.gif" />
+    <Content Include="Content\img\controls\MohammadiLogo.jpg" />
+    <Content Include="Content\img\controls\Right-Arrow.gif" />
+    <Content Include="Content\img\defaultPic.jpg" />
+    <Content Include="Content\img\desc.png" />
+    <Content Include="Content\img\favicon.png" />
+    <Content Include="Content\img\loading.gif" />
+    <Content Include="Content\img\login.jpg" />
+    <Content Include="Content\img\MGLogo.jpg" />
+    <Content Include="Content\img\refresh.gif" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\jquery-ui.min.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\jquery.slimscroll.min.js" />
+    <Content Include="Content\js\project.js" />
+    <Content Include="Content\LeaveOpening\Opening.txt" />
+    <Content Include="DB Scripts\Version 2.3.0\01.LMS_uspGetLeaveAppDuration.sql" />
+    <Content Include="DB Scripts\Version 2.3.0\02.LMS_tblLeaveRuleAlter.sql" />
+    <Content Include="DB Scripts\Version 2.3.0\03.LMS_uspLeaveRuleSave.sql" />
+    <Content Include="DB Scripts\Version2.2.0\01. LMS_uspLedgerUpdate.sql" />
+    <Content Include="DB Scripts\Version2.2.0\02. LMS_uspLeaveEntitlement.sql" />
+    <Content Include="DB Scripts\Version2.2.0\03. FN_GetAllAdjustWithLeaveRuleID.sql" />
+    <Content Include="DB Scripts\Version2.2.0\04. FN_GetLeaveTotalAvailed.sql" />
+    <Content Include="DB Scripts\Version2.2.0\05.LMS_uspGetLeaveAppDuration.sql" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="lib\MvcContrib.dll" />
+    <Content Include="lib\PrimaryBaseLibrary.dll" />
+    <Content Include="lib\System.Web.Mvc.dll" />
+    <Content Include="Note\Note.txt" />
+    <Content Include="Note\Settings.txt" />
+    <Content Include="obj\Debug\TempPE\DSCompanyInfo1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\LeaveAvailedDataSet1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\LeaveEncasmentDataSet1.Designer.cs.dll" />
+    <Content Include="Reports\viewers\LMSAutocomplete.aspx" />
+    <Content Include="Reports\viewers\MyLeaveStatus.aspx" />
+    <Content Include="Reports\viewers\PrintLeaveApplication.aspx" />
+    <Content Include="Reports\viewers\ReportLeaveInfo.aspx" />
+    <Content Include="Scripts\Alert\alert.js" />
+    <Content Include="Scripts\Alert\js-core.js" />
+    <Content Include="Scripts\date-util.js" />
+    <Content Include="Scripts\fileuploader.js" />
+    <Content Include="Scripts\grid.js" />
+    <Content Include="Scripts\jPrint.js" />
+    <None Include="Connected Services\UserMgtService\UserManagementService.wsdl" />
+    <None Include="Connected Services\UserMgtService\UserManagementService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserMgtService\UserManagementService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserMgtService\UserManagementService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserMgtService\UserManagementService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\LMA.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.3.2.js" />
+    <None Include="Scripts\jquery-1.3.2.min-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\jquery-autocomplete\indicator.gif" />
+    <Content Include="Scripts\jquery-autocomplete\jquery.autocomplete.css" />
+    <Content Include="Scripts\jquery-autocomplete\jquery.autocomplete.js" />
+    <Content Include="Scripts\jquery-autocomplete\jquery.autocomplete.min.js" />
+    <Content Include="Scripts\jquery-autocomplete\jquery.autocomplete.pack.js" />
+    <Content Include="Scripts\jquery-autocomplete\lib\jquery.ajaxQueue.js" />
+    <Content Include="Scripts\jquery-autocomplete\lib\jquery.bgiframe.min.js" />
+    <Content Include="Scripts\jquery-autocomplete\lib\jquery.js" />
+    <Content Include="Scripts\jquery-autocomplete\lib\thickbox-compressed.js" />
+    <Content Include="Scripts\jquery-autocomplete\lib\thickbox.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\ui.accordion.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\ui.all.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\ui.base.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\ui.core.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\ui.datepicker.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\ui.dialog.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\ui.progressbar.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\ui.resizable.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\ui.slider.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\ui.tabs.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\base\ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\jquery-ui-1.7.2.custom.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\ui.accordion.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\ui.all.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\ui.base.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\ui.core.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\ui.datepicker.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\ui.dialog.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\ui.progressbar.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\ui.resizable.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\ui.slider.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\ui.tabs.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\themes\redmond\ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\effects.blind.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\effects.bounce.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\effects.clip.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\effects.core.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\effects.drop.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\effects.explode.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\effects.fold.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\effects.highlight.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\effects.pulsate.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\effects.scale.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\effects.shake.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\effects.slide.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\effects.transfer.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\jquery-ui-i18n.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-ar.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-bg.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-ca.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-cs.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-da.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-de.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-el.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-eo.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-es.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-fa.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-fi.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-fr.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-he.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-hr.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-hu.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-hy.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-id.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-is.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-it.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-ja.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-ko.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-lt.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-lv.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-ms.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-nl.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-no.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-pl.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-pt-BR.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-ro.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-ru.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-sk.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-sl.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-sq.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-sr-SR.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-sr.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-sv.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-th.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-tr.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-uk.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-zh-CN.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\i18n\ui.datepicker-zh-TW.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\jquery-ui-1.7.2.custom.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\ui.accordion.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\ui.core.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\ui.datepicker.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\ui.dialog.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\ui.draggable.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\ui.droppable.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\ui.progressbar.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\ui.resizable.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\ui.selectable.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\ui.slider.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\ui.sortable.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2\ui\ui.tabs.js" />
+    <Content Include="Scripts\jquery-ui-1.8.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-timepicker-addon.js" />
+    <Content Include="Scripts\jquery.autocomplete.js" />
+    <Content Include="Scripts\jquery.autocomplete.min.js" />
+    <Content Include="Scripts\jquery.bgiframe.min.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\Jquery.cooke.js" />
+    <Content Include="Scripts\jquery.dataTables.js" />
+    <Content Include="Scripts\jquery.form.js" />
+    <Content Include="Scripts\jquery.tablehover.js" />
+    <Content Include="Scripts\jquery.timePicker.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <None Include="Scripts\jquery.validate.min-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\NumberToWord.js" />
+    <Content Include="Scripts\toword.js" />
+    <Content Include="Scripts\ui-validation.js" />
+    <Content Include="Scripts\Utility.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Administration\Index.aspx" />
+    <Content Include="Views\AlternateApprovalProcess\AlternateApprovalProcess.ascx" />
+    <Content Include="Views\AlternateApprovalProcess\AlternateApprovalProcessAdd.aspx" />
+    <Content Include="Views\AlternateApprovalProcess\AlternateApprovalProcessDetails.ascx" />
+    <Content Include="Views\AlternateApprovalProcess\ApplicationStatus.aspx" />
+    <Content Include="Views\AlternateApprovalProcess\Details.aspx" />
+    <Content Include="Views\AlternateApprovalProcess\Index.aspx" />
+    <Content Include="Views\ApprovalFlow\ApprovalFlowDetails.ascx" />
+    <Content Include="Views\ApprovalFlow\ApprovalFlowDetailsPreview.ascx" />
+    <Content Include="Views\ApprovalFlow\Details.aspx" />
+    <Content Include="Views\ApprovalFlow\Index.aspx" />
+    <Content Include="Views\ApprovalGroup\ApprovalGroup.ascx" />
+    <Content Include="Views\ApprovalGroup\ApprovalGroupAdd.aspx" />
+    <Content Include="Views\ApprovalGroup\ApprovalGroupDetails.ascx" />
+    <Content Include="Views\ApprovalGroup\Details.aspx" />
+    <Content Include="Views\ApprovalGroup\Index.aspx" />
+    <Content Include="Views\ApprovalPath\ApprovalPath.ascx" />
+    <Content Include="Views\ApprovalPath\ApprovalPathAdd.aspx" />
+    <Content Include="Views\ApprovalPath\ApprovalPathDetails.ascx" />
+    <Content Include="Views\ApprovalPath\Details.aspx" />
+    <Content Include="Views\ApprovalPath\Index.aspx" />
+    <Content Include="Views\ApprovalPath\SetApprover.aspx" />
+    <Content Include="Views\ApprovalPath\SetApproverDetails.ascx" />
+    <Content Include="Views\AttendanceReport\AttendanceReport.ascx" />
+    <Content Include="Views\AttendanceReport\Index.aspx" />
+    <Content Include="Views\AttendanceReport\Report.aspx" />
+    <Content Include="Views\AttendanceReport\ReportView.ascx" />
+    <Content Include="Views\AttendanceReport\rptAbsentEmployeeList.ascx" />
+    <Content Include="Views\AttendanceReport\rptEarlyArrivalEmployeeList.ascx" />
+    <Content Include="Views\AttendanceReport\rptEarlyDepartureEmployeeList.ascx" />
+    <Content Include="Views\AttendanceReport\rptEmployeeAttendanceStatus.ascx" />
+    <Content Include="Views\AttendanceReport\rptEmployeeJobCard.ascx" />
+    <Content Include="Views\AttendanceReport\rptEmployeeOnLeaveList.ascx" />
+    <Content Include="Views\AttendanceReport\rptEmployeeStatusSummary.ascx" />
+    <Content Include="Views\AttendanceReport\rptEmployeeWorkingCalendar.ascx" />
+    <Content Include="Views\AttendanceReport\rptLateArrivalEmployeeList.ascx" />
+    <Content Include="Views\AttendanceReport\rptLateDepartureEmployeeList.ascx" />
+    <Content Include="Views\AttendanceReport\rptOSDEmployeeList.ascx" />
+    <Content Include="Views\AttendanceReport\rptOutOfOfficeCompare.ascx" />
+    <Content Include="Views\AttendanceReport\rptPresentEmployeeList.ascx" />
+    <Content Include="Views\AttendanceStatus\AttendanceStatus.aspx" />
+    <Content Include="Views\AttendanceStatus\Index.aspx" />
+    <Content Include="Views\AttendanceStatus\StatusDetails.ascx" />
+    <Content Include="Views\Attendance\Index.aspx" />
+    <Content Include="Views\AttRule\AttRule.ascx" />
+    <Content Include="Views\AttRule\AttRuleAdd.aspx" />
+    <Content Include="Views\AttRule\AttRuleDetails.ascx" />
+    <Content Include="Views\AttRule\Details.aspx" />
+    <Content Include="Views\AttRule\Index.aspx" />
+    <Content Include="Views\BreakTimeSetup\BreakTimeSetup.ascx" />
+    <Content Include="Views\BreakTimeSetup\BreakTimeSetupAdd.aspx" />
+    <Content Include="Views\BreakTimeSetup\BreakTimeSetupDetails.ascx" />
+    <Content Include="Views\BreakTimeSetup\Details.aspx" />
+    <Content Include="Views\BreakTimeSetup\Index.aspx" />
+    <Content Include="Views\BreakType\BreakType.ascx" />
+    <Content Include="Views\BreakType\BreakTypeAdd.aspx" />
+    <Content Include="Views\BreakType\BreakTypeDetails.ascx" />
+    <Content Include="Views\BreakType\Details.aspx" />
+    <Content Include="Views\BreakType\Index.aspx" />
+    <Content Include="Views\CardAssign\CardAssign.ascx" />
+    <Content Include="Views\CardAssign\CardAssignAdd.aspx" />
+    <Content Include="Views\CardAssign\CardAssignDetails.ascx" />
+    <Content Include="Views\CardAssign\Details.aspx" />
+    <Content Include="Views\CardAssign\Index.aspx" />
+    <Content Include="Views\CardInfo\CardInfo.ascx" />
+    <Content Include="Views\CardInfo\CardInfoAdd.aspx" />
+    <Content Include="Views\CardInfo\CardInfoDetails.ascx" />
+    <Content Include="Views\CardInfo\CardInfoSearch.aspx" />
+    <Content Include="Views\CardInfo\CardSearch.ascx" />
+    <Content Include="Views\CardInfo\Details.aspx" />
+    <Content Include="Views\CardInfo\Index.aspx" />
+    <Content Include="Views\CommonConfig\Column.ascx" />
+    <Content Include="Views\CommonConfig\ColumnDetail.ascx" />
+    <Content Include="Views\CommonConfig\CommonConfigAdd.aspx" />
+    <Content Include="Views\CommonConfig\CommonConfigAddDetails.ascx" />
+    <Content Include="Views\CommonConfig\CommonConfigDetails.ascx" />
+    <Content Include="Views\CommonConfig\Index.aspx" />
+    <Content Include="Views\CommonConfig\Table.ascx" />
+    <Content Include="Views\ConveyanceReport\ConveyanceReport.ascx" />
+    <Content Include="Views\ConveyanceReport\ConveyanceReportDetails.ascx" />
+    <Content Include="Views\ConveyanceReport\Index.aspx" />
+    <Content Include="Views\ConveyanceReport\ReportDetails.aspx" />
+    <Content Include="Views\Conveyance\ConveyanceDetails.aspx" />
+    <Content Include="Views\Conveyance\Details.ascx" />
+    <Content Include="Views\Conveyance\Index.aspx" />
+    <Content Include="Views\Conveyance\List.ascx" />
+    <Content Include="Views\Conveyance\PaidList.ascx" />
+    <Content Include="Views\Conveyance\ViewList.ascx" />
+    <Content Include="Views\Customer\Edit.aspx" />
+    <Content Include="Views\Customer\List.aspx" />
+    <Content Include="Views\Customer\_Grid.aspx" />
+    <Content Include="Views\Dashboard\Dashboard.ascx" />
+    <Content Include="Views\Dashboard\Index.aspx" />
+    <Content Include="Views\EmployeeWiseApprovalPath\Details.aspx" />
+    <Content Include="Views\EmployeeWiseApprovalPath\EmployeeWiseApprovalPath.ascx" />
+    <Content Include="Views\EmployeeWiseApprovalPath\EmployeeWiseApprovalPathAdd.aspx" />
+    <Content Include="Views\EmployeeWiseApprovalPath\EmployeeWiseApprovalPathDetails.ascx" />
+    <Content Include="Views\EmployeeWiseApprovalPath\Index.aspx" />
+    <Content Include="Views\EmployeeWiseOOAApprovalPath\Details.aspx" />
+    <Content Include="Views\EmployeeWiseOOAApprovalPath\EmployeeWiseApprovalPath.ascx" />
+    <Content Include="Views\EmployeeWiseOOAApprovalPath\EmployeeWiseApprovalPathAdd.aspx" />
+    <Content Include="Views\EmployeeWiseOOAApprovalPath\EmployeeWiseApprovalPathDetails.ascx" />
+    <Content Include="Views\EmployeeWiseOOAApprovalPath\Index.aspx" />
+    <Content Include="Views\Employee\Edit.aspx" />
+    <Content Include="Views\Employee\EmpList.ascx" />
+    <Content Include="Views\Employee\List.aspx" />
+    <Content Include="Views\Employee\Search.ascx" />
+    <Content Include="Views\Employee\SearchEmployee.ascx" />
+    <Content Include="Views\Employee\_Grid.aspx" />
+    <Content Include="Views\ExportToExcel\ExportToExcel.aspx" />
+    <Content Include="Views\HolidayWeekDay\Details.aspx" />
+    <Content Include="Views\HolidayWeekDay\HolidayWeekDay.ascx" />
+    <Content Include="Views\HolidayWeekDay\HolidayWeekDayAdd.aspx" />
+    <Content Include="Views\HolidayWeekDay\HolidayWeekDayDetails.ascx" />
+    <Content Include="Views\HolidayWeekDay\Index.aspx" />
+    <Content Include="Views\HolidayWeekendRuleAssign\Details.aspx" />
+    <Content Include="Views\HolidayWeekendRuleAssign\HolidayWeekendRuleAssign.ascx" />
+    <Content Include="Views\HolidayWeekendRuleAssign\HolidayWeekendRuleAssignAdd.aspx" />
+    <Content Include="Views\HolidayWeekendRuleAssign\HolidayWeekendRuleAssignDetails.ascx" />
+    <Content Include="Views\HolidayWeekendRuleAssign\Index.aspx" />
+    <Content Include="Views\HolidayWeekendRule\Details.aspx" />
+    <Content Include="Views\HolidayWeekendRule\HolidayWeekendRule.ascx" />
+    <Content Include="Views\HolidayWeekendRule\HolidayWeekendRuleAdd.aspx" />
+    <Content Include="Views\HolidayWeekendRule\HolidayWeekendRuleDetails.ascx" />
+    <Content Include="Views\HolidayWeekendRule\Index.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\HRPolicyName\Details.aspx" />
+    <Content Include="Views\HRPolicyName\HRPolicyNameDetails.ascx" />
+    <Content Include="Views\HRPolicyName\HRPolicyNameList.ascx" />
+    <Content Include="Views\ImportAttendRawData\ImportAttendRawData.aspx" />
+    <Content Include="Views\ImportAttendRawData\ImportAttendRawDataDetails.ascx" />
+    <Content Include="Views\ImportAttendRawData\Index.aspx" />
+    <Content Include="Views\JobTypeName\Details.aspx" />
+    <Content Include="Views\JobTypeName\Index.aspx" />
+    <Content Include="Views\JobTypeName\JobTypeNameDetails.ascx" />
+    <Content Include="Views\JobTypeName\JobTypeNameList.ascx" />
+    <Content Include="Views\LeaveAdjustment\AdjustmentStatus.aspx" />
+    <Content Include="Views\LeaveAdjustment\Details.aspx" />
+    <Content Include="Views\LeaveAdjustment\Index.aspx" />
+    <Content Include="Views\LeaveAdjustment\LeaveAdjustment.ascx" />
+    <Content Include="Views\LeaveAdjustment\LeaveAdjustmentAdd.aspx" />
+    <Content Include="Views\LeaveAdjustment\LeaveAdjustmentDetails.ascx" />
+    <Content Include="Views\LeaveAdjustment\LeaveAdjustmentDetailsPreview.ascx" />
+    <Content Include="Views\LeaveApplication\ApplicationStatus.aspx" />
+    <Content Include="Views\LeaveApplication\Details.aspx" />
+    <Content Include="Views\LeaveApplication\Index.aspx" />
+    <Content Include="Views\LeaveApplication\LeaveApplication.ascx" />
+    <Content Include="Views\LeaveApplication\LeaveApplicationAdd.aspx" />
+    <Content Include="Views\LeaveApplication\LeaveApplicationDetails.ascx" />
+    <Content Include="Views\LeaveApplication\LeaveApplicationDetailsPreview.ascx" />
+    <Content Include="Views\LeaveApplication\LeaveLedger.ascx" />
+    <Content Include="Views\LeaveApplication\NoEmailAddressFound.ascx" />
+    <Content Include="Views\LeaveEncasment\Details.aspx" />
+    <Content Include="Views\LeaveEncasment\Index.aspx" />
+    <Content Include="Views\LeaveEncasment\LeaveEncasment.ascx" />
+    <Content Include="Views\LeaveEncasment\LeaveEncasmentAdd.aspx" />
+    <Content Include="Views\LeaveEncasment\LeaveEncasmentDetails.ascx" />
+    <Content Include="Views\LeaveEntitlement\Index.aspx" />
+    <Content Include="Views\LeaveEntitlement\LeaveEntitlementDetails.ascx" />
+    <Content Include="Views\LeaveOpening\Index.aspx" />
+    <Content Include="Views\LeaveOpening\LeaveOpeningDetails.ascx" />
+    <Content Include="Views\LeaveRuleAssignment\Details.aspx" />
+    <Content Include="Views\LeaveRuleAssignment\Index.aspx" />
+    <Content Include="Views\LeaveRuleAssignment\LeaveRuleAssignment.ascx" />
+    <Content Include="Views\LeaveRuleAssignment\LeaveRuleAssignmentAdd.aspx" />
+    <Content Include="Views\LeaveRuleAssignment\LeaveRuleAssignmentDetails.ascx" />
+    <Content Include="Views\LeaveRule\Details.aspx" />
+    <Content Include="Views\LeaveRule\Index.aspx" />
+    <Content Include="Views\LeaveRule\LeaveRule.ascx" />
+    <Content Include="Views\LeaveRule\LeaveRuleAdd.aspx" />
+    <Content Include="Views\LeaveRule\LeaveRuleDetails.ascx" />
+    <Content Include="Views\LeaveType\Details.aspx" />
+    <Content Include="Views\LeaveType\Index.aspx" />
+    <Content Include="Views\LeaveType\LeaveType.ascx" />
+    <Content Include="Views\LeaveType\LeaveTypeAdd.aspx" />
+    <Content Include="Views\LeaveType\LeaveTypeDetails.ascx" />
+    <Content Include="Views\LeaveYearMapping\Details.aspx" />
+    <Content Include="Views\LeaveYearMapping\Index.aspx" />
+    <Content Include="Views\LeaveYearMapping\LeaveYearMapping.ascx" />
+    <Content Include="Views\LeaveYearMapping\LeaveYearMappingAdd.aspx" />
+    <Content Include="Views\LeaveYearMapping\LeaveYearMappingDetails.ascx" />
+    <Content Include="Views\LeaveYearType\Details.aspx" />
+    <Content Include="Views\LeaveYearType\Index.aspx" />
+    <Content Include="Views\LeaveYearType\LeaveYearType.ascx" />
+    <Content Include="Views\LeaveYearType\LeaveYearTypeAdd.aspx" />
+    <Content Include="Views\LeaveYearType\LeaveYearTypeDetails.ascx" />
+    <Content Include="Views\LeaveYear\Details.aspx" />
+    <Content Include="Views\LeaveYear\Index.aspx" />
+    <Content Include="Views\LeaveYear\LeaveYear.ascx" />
+    <Content Include="Views\LeaveYear\LeaveYearAdd.aspx" />
+    <Content Include="Views\LeaveYear\LeaveYearDetails.ascx" />
+    <Content Include="Views\ManualIO\Details.aspx" />
+    <Content Include="Views\ManualIO\Index.aspx" />
+    <Content Include="Views\ManualIO\ManualIO.ascx" />
+    <Content Include="Views\ManualIO\ManualIOAdd.aspx" />
+    <Content Include="Views\ManualIO\ManualIODetails.ascx" />
+    <Content Include="Views\MembershipTypeName\Details.aspx" />
+    <Content Include="Views\MembershipTypeName\MembershipTypeNameDetails.ascx" />
+    <Content Include="Views\MembershipTypeName\MembershipTypeNameList.ascx" />
+    <Content Include="Views\Menu\Header.ascx" />
+    <Content Include="Views\Menu\LeftMenu.ascx" />
+    <Content Include="Views\MISCApprovalPath\ApprovalDetails.ascx" />
+    <Content Include="Views\MISCApprovalPath\ApprovalList.ascx" />
+    <Content Include="Views\MISCApprovalPath\Index.aspx" />
+    <Content Include="Views\MISCApproval\ApprovalDetails.ascx" />
+    <Content Include="Views\MISCApproval\ApprovalList.ascx" />
+    <Content Include="Views\MISCApproval\AttachmentView.aspx" />
+    <Content Include="Views\MISCApproval\Detail.aspx" />
+    <Content Include="Views\MISCApproval\Index.aspx" />
+    <Content Include="Views\MiscellaneousReport\MiscellaneousReport.ascx" />
+    <Content Include="Views\MiscellaneousReport\MiscellaneousReportDetails.ascx" />
+    <Content Include="Views\MiscellaneousVoucher\AttachmentView.aspx" />
+    <Content Include="Views\MiscellaneousVoucher\Details.aspx" />
+    <Content Include="Views\MiscellaneousVoucher\DetailsList.aspx" />
+    <Content Include="Views\MiscellaneousVoucher\Index.aspx" />
+    <Content Include="Views\MiscellaneousVoucher\List.ascx" />
+    <Content Include="Views\MiscellaneousVoucher\Voucher.aspx" />
+    <Content Include="Views\MiscellaneousVoucher\VoucherDetail.ascx" />
+    <Content Include="Views\MiscellaneousVoucher\VoucherDetailList.ascx" />
+    <Content Include="Views\MiscellaneousVoucher\VoucherList.ascx" />
+    <Content Include="Views\MISC\Index.aspx" />
+    <Content Include="Views\MISC\MISC.aspx" />
+    <Content Include="Views\MISC\MISCDetails.ascx" />
+    <Content Include="Views\MISC\MISCLIST.ascx" />
+    <Content Include="Views\MISC\MISCUpload.aspx" />
+    <Content Include="Views\MyConveyance\ConveyanceDetails.ascx" />
+    <Content Include="Views\MyConveyance\ConveyanceList.ascx" />
+    <Content Include="Views\MyConveyance\Details.aspx" />
+    <Content Include="Views\MyConveyance\DetailsList.ascx" />
+    <Content Include="Views\MyLeave\Index.aspx" />
+    <Content Include="Views\MyMiscellaneous\Index.ascx" />
+    <Content Include="Views\OfficeTime\Details.aspx" />
+    <Content Include="Views\OfficeTime\Index.aspx" />
+    <Content Include="Views\OfficeTime\OfficeTime.ascx" />
+    <Content Include="Views\OfficeTime\OfficeTimeAdd.aspx" />
+    <Content Include="Views\OfficeTime\OfficeTimeDetails.ascx" />
+    <Content Include="Views\OfflineLeaveAdjustment\Details.aspx" />
+    <Content Include="Views\OfflineLeaveAdjustment\Index.aspx" />
+    <Content Include="Views\OfflineLeaveAdjustment\OfflineLeaveAdjustment.ascx" />
+    <Content Include="Views\OfflineLeaveAdjustment\OfflineLeaveAdjustmentAdd.aspx" />
+    <Content Include="Views\OfflineLeaveAdjustment\OfflineLeaveAdjustmentDetails.ascx" />
+    <Content Include="Views\OfflineLeaveAdjustment\OfflineLeaveAdjustmentDetailsPreview.ascx" />
+    <Content Include="Views\OfflineLeaveApplication\Details.aspx" />
+    <Content Include="Views\OfflineLeaveApplication\Index.aspx" />
+    <Content Include="Views\OfflineLeaveApplication\LeaveLedger.ascx" />
+    <Content Include="Views\OfflineLeaveApplication\OfflineLeaveApplication.ascx" />
+    <Content Include="Views\OfflineLeaveApplication\OfflineLeaveApplicationAdd.aspx" />
+    <Content Include="Views\OfflineLeaveApplication\OfflineLeaveApplicationDetails.ascx" />
+    <Content Include="Views\OfflineLeaveApplication\OfflineLeaveApplicationDetailsPreview.ascx" />
+    <Content Include="Views\OOAApprovalPath\ApprovalPath.ascx" />
+    <Content Include="Views\OOAApprovalPath\ApprovalPathAdd.aspx" />
+    <Content Include="Views\OOAApprovalPath\ApprovalPathDetails.ascx" />
+    <Content Include="Views\OOAApprovalPath\Details.aspx" />
+    <Content Include="Views\OOAApprovalPath\Index.aspx" />
+    <Content Include="Views\OOAApprovalPath\SetApprover.aspx" />
+    <Content Include="Views\OOAApprovalPath\SetApproverDetails.ascx" />
+    <Content Include="Views\OOAApprovalProcess\Details.aspx" />
+    <Content Include="Views\OOAApprovalProcess\Index.aspx" />
+    <Content Include="Views\OOAApprovalProcess\OutOfOfficeDetails.ascx" />
+    <Content Include="Views\OOAApprovalProcess\OutOfOfficeEntry.ascx" />
+    <Content Include="Views\OOAApprovalProcess\PermissionNVarify.ascx" />
+    <Content Include="Views\OSMCommonConfig\Index.aspx" />
+    <Content Include="Views\OSM\Index.aspx" />
+    <Content Include="Views\OutOfOfficeDetails\Advance.aspx" />
+    <Content Include="Views\OutOfOfficeDetails\AdvanceGetOut.ascx" />
+    <Content Include="Views\OutOfOfficeDetails\Index.aspx" />
+    <Content Include="Views\OutOfOfficeDetails\OutOfOfficeAdd.aspx" />
+    <Content Include="Views\OutOfOfficeDetails\OutOfOfficeDetails.ascx" />
+    <Content Include="Views\OutOfOfficeDetails\OutOfOfficeEntry.ascx" />
+    <Content Include="Views\OutOfOfficeDetails\OutOfOfficeList.aspx" />
+    <Content Include="Views\OutOfOfficeReport\Index.aspx" />
+    <Content Include="Views\OutOfOfficeReport\OutOfOfficeAdd.aspx" />
+    <Content Include="Views\OutOfOfficeReport\OutOfOfficeEntry.ascx" />
+    <Content Include="Views\OutOfOfficeReport\Report.ascx" />
+    <Content Include="Views\OutOfOffice\Default.aspx" />
+    <Content Include="Views\OutOfOffice\Index.aspx" />
+    <Content Include="Views\RdlcReport\ReportViewer.aspx" />
+    <Content Include="Views\Reports\ExportToExcel.ascx" />
+    <Content Include="Views\Reports\Index.aspx" />
+    <Content Include="Views\Reports\MyLeaveStatus.ascx" />
+    <Content Include="Views\Reports\Reports.ascx" />
+    <Content Include="Views\Reports\rptLeaveEncasment.ascx" />
+    <Content Include="Views\Reports\rptLeaveEnjoyed.ascx" />
+    <Content Include="Views\Reports\rptLeaveStatus.ascx" />
+    <Content Include="Views\SearchApplication\ApplicationList.aspx" />
+    <Content Include="Views\SearchApplication\Details.aspx" />
+    <Content Include="Views\SearchApplication\Index.aspx" />
+    <Content Include="Views\SearchApplication\SearchApplication.ascx" />
+    <Content Include="Views\SetOverTime\Details.aspx" />
+    <Content Include="Views\SetOverTime\Index.aspx" />
+    <Content Include="Views\SetOverTime\SetOverTime.ascx" />
+    <Content Include="Views\SetOverTime\SetOverTimeAdd.aspx" />
+    <Content Include="Views\SetOverTime\SetOverTimeDetails.ascx" />
+    <Content Include="Views\Setup\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\ShiftAssignment\Details.aspx" />
+    <Content Include="Views\ShiftAssignment\Index.aspx" />
+    <Content Include="Views\ShiftAssignment\ShiftAssignment.ascx" />
+    <Content Include="Views\ShiftAssignment\ShiftAssignmentAdd.aspx" />
+    <Content Include="Views\ShiftAssignment\ShiftAssignmentDetails.ascx" />
+    <Content Include="Views\Shift\Details.aspx" />
+    <Content Include="Views\Shift\Shift.ascx" />
+    <Content Include="Views\Shift\ShiftAdd.aspx" />
+    <Content Include="Views\Shift\ShiftDetails.ascx" />
+    <Content Include="Views\SkillTypeName\Details.aspx" />
+    <Content Include="Views\SkillTypeName\Index.aspx" />
+    <Content Include="Views\SkillTypeName\SkillTypeNameDetails.ascx" />
+    <Content Include="Views\SkillTypeName\SkillTypeNameList.ascx" />
+    <Content Include="Views\Synchronization\Index.aspx" />
+    <Content Include="Views\Synchronization\Synchronize.ascx" />
+    <Content Include="Views\SystemInitialization\AlreadyInitialized.ascx" />
+    <Content Include="Views\SystemInitialization\Index.aspx" />
+    <Content Include="Views\SystemInitialization\Initialization.ascx" />
+    <Content Include="Views\WeekendHolidayAsWorkingday\Details.aspx" />
+    <Content Include="Views\WeekendHolidayAsWorkingday\WeekendHolidayAsWorkingday.ascx" />
+    <Content Include="Views\WeekendHolidayAsWorkingday\WeekendHolidayAsWorkingdayAdd.aspx" />
+    <Content Include="Views\WeekendHolidayAsWorkingday\WeekendHolidayAsWorkingdayDetails.ascx" />
+    <Content Include="Views\WeekendHolidayWorkingHour\Details.aspx" />
+    <Content Include="Views\WeekendHolidayWorkingHour\Index.aspx" />
+    <Content Include="Views\WeekendHolidayWorkingHour\WeekendHolidayWorkingHour.ascx" />
+    <Content Include="Views\WeekendHolidayWorkingHour\WeekendHolidayWorkingHourAdd.aspx" />
+    <Content Include="Views\WeekendHolidayWorkingHour\WeekendHolidayWorkingHourDetails.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebService\SoapService.svc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code_\AppConstant.cs" />
+    <Compile Include="App_Code_\Common.cs" />
+    <Compile Include="App_Code_\CustomMembershipProvider.cs" />
+    <Compile Include="App_Code_\ExportToExcel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code_\GridStateService.cs" />
+    <Compile Include="App_Code_\LoginInfo.cs" />
+    <Compile Include="App_Code_\Permission.cs" />
+    <Compile Include="App_Code_\StringExtensions.cs" />
+    <Compile Include="App_Code_\StringFormatter.cs" />
+    <Compile Include="App_Code_\UserMgtAgent.cs" />
+    <Compile Include="App_Code_\Utils.cs" />
+    <Compile Include="App_Code_\VerifyArgument.cs" />
+    <Compile Include="Connected Services\UserMgtService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdministrationController.cs" />
+    <Compile Include="Controllers\AlternateApprovalProcessController.cs" />
+    <Compile Include="Controllers\ApprovalFlowController.cs" />
+    <Compile Include="Controllers\ApprovalGroupController.cs" />
+    <Compile Include="Controllers\ApprovalPathController.cs" />
+    <Compile Include="Controllers\AttendanceController.cs" />
+    <Compile Include="Controllers\AttendanceReportController.cs" />
+    <Compile Include="Controllers\AttendanceStatusController.cs" />
+    <Compile Include="Controllers\AttRuleController.cs" />
+    <Compile Include="Controllers\BreakTimeSetupController.cs" />
+    <Compile Include="Controllers\BreakTypeController.cs" />
+    <Compile Include="Controllers\CardAssignController.cs" />
+    <Compile Include="Controllers\CardInfoController.cs" />
+    <Compile Include="Controllers\CommonConfigController.cs" />
+    <Compile Include="Controllers\CompanyController.cs" />
+    <Compile Include="Controllers\ConveyanceController.cs" />
+    <Compile Include="Controllers\ConveyanceReportController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\EmployeeWiseApprovalPathController.cs" />
+    <Compile Include="Controllers\EmployeeWiseOOAApprovalPathController.cs" />
+    <Compile Include="Controllers\ExportToExcelController.cs" />
+    <Compile Include="Controllers\HolidayWeekDayController.cs" />
+    <Compile Include="Controllers\HolidayWeekendRuleAssignController.cs" />
+    <Compile Include="Controllers\HolidayWeekendRuleController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HRPolicyNameController.cs" />
+    <Compile Include="Controllers\ImportAttendRawDataController.cs" />
+    <Compile Include="Controllers\JobTypeController.cs" />
+    <Compile Include="Controllers\JobTypeNameController.cs" />
+    <Compile Include="Controllers\LeaveAdjustmentController.cs" />
+    <Compile Include="Controllers\LeaveApplicationController.cs" />
+    <Compile Include="Controllers\LeaveEncasmentController.cs" />
+    <Compile Include="Controllers\LeaveEntitlementController.cs" />
+    <Compile Include="Controllers\LeaveOpeningController.cs" />
+    <Compile Include="Controllers\LeaveRuleAssignmentController.cs" />
+    <Compile Include="Controllers\LeaveRuleController.cs" />
+    <Compile Include="Controllers\LeaveTypeController.cs" />
+    <Compile Include="Controllers\LeaveYearController.cs" />
+    <Compile Include="Controllers\LeaveYearMappingController.cs" />
+    <Compile Include="Controllers\LeaveYearTypeController.cs" />
+    <Compile Include="Controllers\ManualIOController.cs" />
+    <Compile Include="Controllers\MembershipTypeNameController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\MISCApprovalController.cs" />
+    <Compile Include="Controllers\MISCApprovalPathController.cs" />
+    <Compile Include="Controllers\MISCController.cs" />
+    <Compile Include="Controllers\MiscellaneousReportController.cs" />
+    <Compile Include="Controllers\MiscellaneousVoucherController.cs" />
+    <Compile Include="Controllers\MyConveyanceController.cs" />
+    <Compile Include="Controllers\MyLeaveController.cs" />
+    <Compile Include="Controllers\MyMiscellaneousController.cs" />
+    <Compile Include="Controllers\OfficeTimeController.cs" />
+    <Compile Include="Controllers\OfflineLeaveAdjustmentController.cs" />
+    <Compile Include="Controllers\OfflineLeaveApplicationController.cs" />
+    <Compile Include="Controllers\OOAApprovalFlowController.cs" />
+    <Compile Include="Controllers\OOAApprovalPathController.cs" />
+    <Compile Include="Controllers\OOAApprovalProcessController.cs" />
+    <Compile Include="Controllers\OSMCommonConfigController.cs" />
+    <Compile Include="Controllers\OSMController.cs" />
+    <Compile Include="Controllers\OutOfOfficeController.cs" />
+    <Compile Include="Controllers\OutOfOfficeDetailsController.cs" />
+    <Compile Include="Controllers\OutOfOfficeReportController.cs" />
+    <Compile Include="Controllers\RdlcReportController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\SearchApplicationController.cs" />
+    <Compile Include="Controllers\SetOverTimeController.cs" />
+    <Compile Include="Controllers\SetupController.cs" />
+    <Compile Include="Controllers\ShiftAssignmentController.cs" />
+    <Compile Include="Controllers\ShiftController.cs" />
+    <Compile Include="Controllers\SkillTypeNameController.cs" />
+    <Compile Include="Controllers\SynchronizationController.cs" />
+    <Compile Include="Controllers\SystemInitializationController.cs" />
+    <Compile Include="Controllers\WeekendHolidayAsWorkingdayController.cs" />
+    <Compile Include="Controllers\WeekendHolidayWorkingHourController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DSCompanyInfo.Designer.cs" />
+    <Compile Include="DSCompanyInfo1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCompanyInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GridStateService.cs" />
+    <Compile Include="Helpers\FileUploadJsonResult.cs" />
+    <Compile Include="Helpers\ImageActionLinkHelper.cs" />
+    <Compile Include="Helpers\MenuItemHelper.cs" />
+    <Compile Include="LeaveAvailedDataSet.Designer.cs" />
+    <Compile Include="LeaveAvailedDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LeaveAvailedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveEncasmentDataSet.Designer.cs" />
+    <Compile Include="LeaveEncasmentDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LeaveEncasmentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\ApprovalFlowModels.cs" />
+    <Compile Include="Models\ApprovalGroupModels.cs" />
+    <Compile Include="Models\ApprovalPathModels.cs" />
+    <Compile Include="Models\AttendanceReportModels.cs" />
+    <Compile Include="Models\AttendanceStatusModels.cs" />
+    <Compile Include="Models\AttRuleModels.cs" />
+    <Compile Include="Models\BreakTimeSetupModels.cs" />
+    <Compile Include="Models\BreakTypeModels.cs" />
+    <Compile Include="Models\CardAssignModels.cs" />
+    <Compile Include="Models\CardInfoModels.cs" />
+    <Compile Include="Models\CommonConfigModels.cs" />
+    <Compile Include="Models\ConveyanceModels.cs" />
+    <Compile Include="Models\ConveyanceReportModels.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerService.cs" />
+    <Compile Include="Models\DashboardModels.cs" />
+    <Compile Include="Models\DataSynchronizationModel.cs" />
+    <Compile Include="Models\EmployeeModels.cs" />
+    <Compile Include="Models\EmployeeWiseApprovalPathModels.cs" />
+    <Compile Include="Models\EmployeeWiseOOAApprovalPathModels.cs" />
+    <Compile Include="Models\HolidayWeekDayModels.cs" />
+    <Compile Include="Models\HolidayWeekendRuleAssignModels.cs" />
+    <Compile Include="Models\HolidayWeekendRuleModels.cs" />
+    <Compile Include="Models\HRPolicyNameModels.cs" />
+    <Compile Include="Models\ImportAttendRawDataModels.cs" />
+    <Compile Include="Models\JobTypeNameModels.cs" />
+    <Compile Include="Models\LeaveApplicationModels.cs" />
+    <Compile Include="Models\LeaveEncasmentModels.cs" />
+    <Compile Include="Models\LeaveEntitlementModels.cs" />
+    <Compile Include="Models\LeaveOpeningModels.cs" />
+    <Compile Include="Models\LeaveRuleAssignmentModels.cs" />
+    <Compile Include="Models\LeaveRuleModels.cs" />
+    <Compile Include="Models\LeaveTypeModels.cs" />
+    <Compile Include="Models\LeaveYearMappingModels.cs" />
+    <Compile Include="Models\LeaveYearModels.cs" />
+    <Compile Include="Models\LeaveYearTypeModels.cs" />
+    <Compile Include="Models\ManualIOModels.cs" />
+    <Compile Include="Models\MembershipTypeNameModels.cs" />
+    <Compile Include="Models\MenuModels.cs" />
+    <Compile Include="Models\MISCApprovalPathModels.cs" />
+    <Compile Include="Models\MiscellaneousReportModels.cs" />
+    <Compile Include="Models\MiscellaneousVoucherModels.cs" />
+    <Compile Include="Models\MISCModels.cs" />
+    <Compile Include="Models\MyConveyanceModels.cs" />
+    <Compile Include="Models\MyMiscellaneousModels.cs" />
+    <Compile Include="Models\OfficeTimeModels.cs" />
+    <Compile Include="Models\OOAApprovalFlowModels.cs" />
+    <Compile Include="Models\OOAApprovalPathModels.cs" />
+    <Compile Include="Models\OOAApprovalProcessModels.cs" />
+    <Compile Include="Models\OutOfOfficeModels.cs" />
+    <Compile Include="Models\ReportModel\ReportViewerViewModel.cs" />
+    <Compile Include="Models\ReportsModels.cs" />
+    <Compile Include="Models\SetOverTimeModels.cs" />
+    <Compile Include="Models\ShiftAssignmentModels.cs" />
+    <Compile Include="Models\ShiftModels.cs" />
+    <Compile Include="Models\SkillTypeNameModels.cs" />
+    <Compile Include="Models\WeekendHolidayAsWorkingdayModels.cs" />
+    <Compile Include="Models\WeekendHolidayWorkingHourModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Model\EmployeeAutocompleteModel.cs" />
+    <Compile Include="Reports\viewers\LMSAutocomplete.aspx.cs">
+      <DependentUpon>LMSAutocomplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\viewers\LMSAutocomplete.aspx.designer.cs">
+      <DependentUpon>LMSAutocomplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\viewers\MyLeaveStatus.aspx.cs">
+      <DependentUpon>MyLeaveStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\viewers\MyLeaveStatus.aspx.designer.cs">
+      <DependentUpon>MyLeaveStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\viewers\PrintLeaveApplication.aspx.cs">
+      <DependentUpon>PrintLeaveApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\viewers\PrintLeaveApplication.aspx.designer.cs">
+      <DependentUpon>PrintLeaveApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\viewers\ReportLeaveInfo.aspx.cs">
+      <DependentUpon>ReportLeaveInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\viewers\ReportLeaveInfo.aspx.designer.cs">
+      <DependentUpon>ReportLeaveInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\viewers\ReportMaster.Master.cs">
+      <DependentUpon>ReportMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\viewers\ReportMaster.Master.designer.cs">
+      <DependentUpon>ReportMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="StringFormatter.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="VerifyArgument.cs" />
+    <Compile Include="ViewModels\Shared\Grid.cs" />
+    <Compile Include="ViewModels\Shared\Pager.cs" />
+    <Compile Include="ViewModels\Shared\SearchForm.cs" />
+    <Compile Include="ViewModels\Shared\Sorter.cs" />
+    <Compile Include="Views\Shared\Logon.Master.cs">
+      <DependentUpon>Logon.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Logon.Master.designer.cs">
+      <DependentUpon>Logon.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebService\ISoapService.cs" />
+    <Compile Include="WebService\SoapService.svc.cs">
+      <DependentUpon>SoapService.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DSCompanyInfo.xsc">
+      <DependentUpon>DSCompanyInfo.xsd</DependentUpon>
+    </Content>
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\OpenSans-Bold.eot" />
+    <Content Include="Content\fonts\OpenSans-Bold.ttf" />
+    <Content Include="Content\fonts\OpenSans-Bold.woff" />
+    <Content Include="Content\fonts\OpenSans-Bold.woff2" />
+    <Content Include="Content\fonts\OpenSans-Regular.eot" />
+    <Content Include="Content\fonts\OpenSans-Regular.ttf" />
+    <Content Include="Content\fonts\OpenSans-Regular.woff" />
+    <Content Include="Content\fonts\OpenSans-Regular.woff2" />
+    <Content Include="Content\img\controls\MG_Logo.wmf" />
+    <Content Include="Content\LeaveOpening\aa\Approval Flow.xls" />
+    <Content Include="Content\LeaveOpening\aa\IWM Leave Opening 2016-01.xls" />
+    <Content Include="Content\LeaveOpening\aa\IWM Leave Opening 2016-02.xls" />
+    <Content Include="Content\LeaveOpening\aa\IWM Leave Opening 2016-03.xls" />
+    <Content Include="Content\LeaveOpening\aa\IWM Leave Opening 2016.xls" />
+    <Content Include="Content\LeaveOpening\aa\IWM Leave Opening 2016.xlsx" />
+    <Content Include="Content\LeaveOpening\aa\IWM Leave Opening.xls" />
+    <Content Include="Content\LeaveOpening\aa\Leave Opening - Jan-Dec.xls" />
+    <Content Include="Content\LeaveOpening\aa\Leave Opening Later Version.xlsx" />
+    <Content Include="Content\LeaveOpening\aa\Leave Opening.xls" />
+    <Content Include="Content\LeaveOpening\Approval Flow.xls" />
+    <Content Include="Content\LeaveOpening\IWM Leave Opening 2016-03.xls" />
+    <Content Include="Content\LeaveOpening\Leave Opening Later Version.xlsx" />
+    <Content Include="Content\LeaveOpening\Leave Opening.xls" />
+    <None Include="DSCompanyInfo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCompanyInfo1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DSCompanyInfo.xss">
+      <DependentUpon>DSCompanyInfo.xsd</DependentUpon>
+    </Content>
+    <Content Include="LeaveAvailedDataSet.xsc">
+      <DependentUpon>LeaveAvailedDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="LeaveAvailedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LeaveAvailedDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="LeaveAvailedDataSet.xss">
+      <DependentUpon>LeaveAvailedDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="LeaveEncasmentDataSet.xsc">
+      <DependentUpon>LeaveEncasmentDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="LeaveEncasmentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LeaveEncasmentDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="LeaveEncasmentDataSet.xss">
+      <DependentUpon>LeaveEncasmentDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Reports\viewers\ReportMaster.Master" />
+    <Content Include="Views\Shared\Logon.Master" />
+    <Content Include="Views\Shared\Modal.Master" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="WebService\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reports\rdlcs\LeaveReportLeaveStatus.rdlc" />
+    <Content Include="Reports\rdlcs\MyLeaveStatus.rdlc" />
+    <Content Include="Reports\rdlcs\ReportLeaveApplication.rdlc" />
+    <Content Include="Reports\rdlcs\ReportLeaveAvailed.rdlc" />
+    <Content Include="Reports\rdlcs\ReportLeaveEncasment.rdlc" />
+    <Content Include="Reports\rdlcs\ReportLeaveRegister.rdlc" />
+    <Content Include="Reports\rdlcs\ReportOfficeOrderRecreationLeave.rdlc" />
+    <Content Include="Reports\rdlcs\ReportRecreationLeave.rdlc" />
+    <Content Include="Reports\rdlcs\ReportYearlyLeaveStatus.rdlc" />
+    <Content Include="Reports\rdlcs\_ReportHeader.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
+    <Folder Include="Content\img\jquery-ui\" />
+    <Folder Include="MISCAttachedFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LMS.BLL\LMS.BLL.csproj">
+      <Project>{2c34ab4f-bc33-4b62-bbca-6e66b4903a6d}</Project>
+      <Name>LMS.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LMS.DAL\LMS.DAL.csproj">
+      <Project>{3df6372e-40bb-4b35-bfad-a86991cf327b}</Project>
+      <Name>LMS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LMS.Util\LMS.Util.csproj">
+      <Project>{628025f4-d867-49cc-b0a1-c64c5457aa2b}</Project>
+      <Name>LMS.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LMSEntity\LMSEntity.csproj">
+      <Project>{089f2fca-d086-4c4a-9df6-bef0689f19a6}</Project>
+      <Name>LMSEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcPaging\MvcPaging.csproj">
+      <Project>{829e6c32-31fb-422a-8b90-377150d74c08}</Project>
+      <Name>MvcPaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TVL.DB\TVL.DB.csproj">
+      <Project>{8390dde2-a1e8-4539-b88a-5dba117db0d7}</Project>
+      <Name>TVL.DB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\UserMgtService\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>11337</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/LMS.Web</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

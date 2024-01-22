@@ -1,0 +1,266 @@
+/*
+ * File:        alert.css
+ * Description: Alert styling
+ * Author:      Allan Jardine
+ * Created:     26-8-07
+ * Language:    CSS
+ * Project:     Alert
+ * 
+ * Copyright 2007-2008 Allan Jardine. All rights reserved.
+
+
+ DOM layout that this style sheet applies to:
+
+ +--div #alert_background--------------------------------------------------+
+ |                                                                         |
+ |                                                                         |
+ |     +--div #alert_wrapper---------------------------------------+       |
+ |     |                                                           |       |
+ |     | +--div #alert_header------------------------------------+ |       |
+ |     | |                        Header                         | |       |
+ |     | +-------------------------------------------------------+ |       |
+ |     |                                                           |       |
+ |     | +--div #alert_content-----------------------------------+ |       |
+ |     | |                                                       | |       |
+ |     | |                        Content                        | |       |
+ |     | |                                                       | |       |
+ |     | +-------------------------------------------------------+ |       |
+ |     |                                                           |       |
+ |     | +--div #alert_buttons-----------------------------------+ |       |
+ |     | |                        Buttons                        | |       |
+ |     | +-------------------------------------------------------+ |       |
+ |     |                                                           |       |
+ |     +-----------------------------------------------------------+       |
+ |                                                                         |
+ |                                                                         |
+ +-------------------------------------------------------------------------+
+
+*/
+
+#alert_background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	
+	z-index: 1;
+	background-color: black;
+	
+	_position: absolute;
+	_top:expression( document.body.scrollTop+'px' );
+}
+
+#alert_background iframe {
+	display:none;/*sorry for IE5*/
+	display/**/:block;/*sorry for IE5*/
+	position:absolute;/*must have*/
+	top:0;/*must have*/
+	left:0;/*must have*/
+	z-index:-1;/*must have*/
+	filter:mask();/*must have*/
+	width: 100%;/*must have for any big value*/
+	height: 100%;/*must have for any big value*/;
+}
+
+#alert_wrapper {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	height: 200px;
+	width: 400px;
+	margin-top: -100px;
+	margin-left: -200px;
+	padding: 12px;
+	
+	z-index: 2;
+	background-color: #DBDADF;
+	border: 1px solid #3E3E3E;
+	color: #3E3E3E;
+	
+	/* Hooray for webkit! */
+	-webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+	-webkit-border-radius: 4px;
+	
+	_position: absolute;
+	_top:expression( (documentElement.scrollTop + ((document.body.clientHeight-this.clientHeight)/2))+'px');
+}
+
+#alert_header {
+	height: 30px;
+	padding-top: 10px;
+	
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #EFEFF0;
+	border: 1px solid #8F908F;
+	text-align: center;
+	
+	/* Hooray for webkit - again! */
+	-webkit-border-radius: 2px;
+}
+
+#alert_content {
+	height: 110px;
+	padding-top: 10px;
+}
+
+#alert_buttons {
+	height: 45px;
+}
+
+#alert_buttons table {
+}
+
+#alert_buttons td {
+	margin: 0;
+	padding: 0;
+	background: url(../img/alert/button.jpg) no-repeat top left;
+	text-align: center;
+}
+
+#alert_buttons td.empty {
+	background: none;
+}
+
+#alert_buttons a {
+	display: block;
+	height: 28px;
+	margin: 0;
+	padding-top: 7px;
+	margin-left: 10px;
+	padding-right: 10px;
+	
+	background: url(../img/alert/button.jpg) no-repeat top right;
+	text-align: center;
+	font-size: 12px;
+	color: black;
+	text-decoration: none;
+	*cursor: hand;
+	cursor: pointer;
+}
+
+#alert_buttons a:hover {
+	text-decoration: none;
+}
+
+#alert_buttons td.selected {
+	background: url(../img/alert/button_selected.jpg) no-repeat top left;
+}
+
+#alert_buttons a.selected {
+	background: url(../img/alert/button_selected.jpg) no-repeat top right;
+}
+
+
+
+
+/*
+ * 'Different' styles for the 'different' classed alert box
+ * Strip these out when you do your own styling
+ */
+#alert_background.different {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	
+	z-index: 1;
+	background-color: black;
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+	
+	_position: absolute;
+	_top:expression( document.body.scrollTop+'px' );
+}
+
+#alert_wrapper.different {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	
+	z-index: 2;
+	color: #3E3E3E;
+	background: url(../images/alt_bg.png) no-repeat bottom left;
+	border-width: 0;
+	
+	/* Honestly this needs a little work. If you want to use this style with IE6 - please feel free... */
+	_position: absolute;
+	_background: none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/alt_bg.png',sizingMethod='crop');
+	_height:expression( document.documentElement.clientHeight+'px');
+	_top:expression( document.body.scrollTop+'px');
+}
+
+#alert_wrapper.different #alert_header {
+	display: none;
+}
+
+#alert_wrapper.different #alert_content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 90px;
+	margin-top: -45px;
+	margin-left: -200px;
+	padding: 12px;
+	
+	background-color: #f3f3f3;
+	border: 3px solid #3f3f3f;
+}
+
+#alert_wrapper.different #alert_buttons {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 30px;
+	width: 400px;
+	margin-top: 15px;
+	margin-left: -200px;
+}
+
+#alert_wrapper.different #alert_buttons td {
+	margin: 0;
+	padding: 0;
+	background: url(../img/alert/button.jpg) no-repeat top left;
+	text-align: center;
+}
+
+#alert_wrapper.different #alert_buttons td.empty {
+	background: none;
+}
+
+#alert_wrapper.different #alert_buttons a {
+	display: block;
+	height: 28px;
+	margin: 0;
+	padding-top: 7px;
+	margin-left: 10px;
+	padding-right: 10px;
+	
+	background: url(../img/alert/button.jpg) no-repeat top right;
+	text-align: center;
+	font-size: 12px;
+	color: black;
+	text-decoration: none;
+	*cursor: hand;
+	cursor: pointer;
+}
+
+#alert_wrapper.different #alert_buttons td.selected {
+	background: url(../img/alert/button_selected.jpg) no-repeat top left;
+}
+
+#alert_wrapper.different #alert_buttons a.selected {
+	background: url(../img/alert/button_selected.jpg) no-repeat top right;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+﻿Please follow the below format for excel sheet.
+
+EmployeeID	CO-SL	AVWP-SL	AVWOP-SL		CO-EL	AVWP-EL	AVWOP-EL		CO-CL	AVWP-CL	AVWOP-CL
+
+
+Note: We have used short name of leave type as column name.
+Each leave type must have two column. 
+One for CarryOver(CO) and another for Availed(AV) field.
+Describe details of clumn name in below.
+
+CO-SL= Carry Over-Sick Leave
+AVWP-SL= Availed(With Pay)-Sick Leave
+AVWOP-SL= Availed(Without Pay)-Sick Leave
+
+CO-EL= Carry Over-Earn Leave
+AVWP-EL= Availed(With Pay)-Earn Leave
+AVWOP-EL= Availed(Without Pay)-Earn Leave
+
+CO-CL= Carry Over-Casual Leave
+AVWP-CL= Availed(With Pay)-Casual Leave
+AVWOP-CL= Availed(Without Pay)-Casual Leave
+
+
+
+
+

@@ -1,0 +1,341 @@
+﻿
+body {
+    color: #474747;
+}
+
+/*
+table td {
+    border: 1px solid #e8eef4;
+    padding: 5px;
+}
+*/
+
+.loginBox
+{
+    height:165px;
+    width:260px;
+    border:1px;
+    border-style:solid;
+    border-color:#d2d8e8;
+    background-color:#ffffff;
+    text-align:left;
+    padding-left:30px;
+    padding-top:30px;
+}
+
+
+
+.divMsg
+{
+	overflow: auto;
+	width: 100%;
+	text-align:left;
+	background-color:#d2d8e8;
+	border-color:White;
+    border-style:solid;
+    border-width:1px;
+    height:30px;   
+}
+
+.divButton
+{
+	
+	width: 100%;
+	padding-top:8px;
+	text-align:center;
+	background-color:#d2d5e8;
+	border-color:#d2d5e8;
+    border-style:solid;
+    border-width:1px;
+    height:30px;
+    float:left;
+}
+.divOuter
+{ 
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    border-color:#d2d8e8;
+    border-style:solid;
+    border-width:1px;
+    overflow:auto;
+}
+.divSpacer
+{ 
+    height:5px;
+    width:100%;
+    border-width:0px;
+}
+.divRow
+{
+	/*margin: 2px 2px 5px 2px;*/
+	overflow: auto;
+	width: 100%;
+}
+.divCol1
+{
+	width: 195px;
+	float: left;
+	text-align: right;
+	position: relative;
+	vertical-align: middle;
+	overflow: visible;
+	display:block;
+}
+.divCol2
+{
+    width: 200px;
+	float: left;
+	text-align: left;
+	position: relative;
+	vertical-align: middle;
+	overflow: visible;
+	display:block;
+	padding-left:5px;
+}
+.divCol2FreeSize
+{
+	float: left;
+	text-align: left;
+	position: relative;
+	vertical-align: middle;
+	overflow: visible;
+	display:block;
+	padding-left:5px;
+    height: 22px;
+}
+.divCol3
+{
+    width: 195px;
+	float: left;
+	text-align: right;
+	position: relative;
+	margin-left: 44px;
+	vertical-align: middle;
+	overflow: visible;
+	display:block;
+}
+.divCol3Extended
+{
+    width: 195px;
+	float: left;
+	text-align: right;
+	position: relative;
+	margin-left: 17px;
+	vertical-align: middle;
+	overflow: visible;
+	display:block;
+}
+.divCol4
+{
+	float: left;
+	text-align: left;
+	position: relative;
+	vertical-align: middle;
+	overflow: visible;
+	display:block;
+	padding-left:5px;
+}
+
+.divCol1Modal
+{
+	width: 175px;
+	float: left;
+	text-align: right;
+	position: relative;
+	vertical-align: middle;
+	overflow: visible;
+	display:block;
+}
+.divCol3Modal
+{
+    width: 175px;
+	float: left;
+	text-align: right;
+	position: relative;
+	margin-left: 44px;
+	vertical-align: middle;
+	overflow: visible;
+	display:block;
+}
+
+.divButtonContainer
+{
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:10px;
+    padding-right:10px;
+    
+    border-color:#d2d8e8;
+    border-style:solid;
+    border-width:1px;
+    
+    vertical-align:middle;
+    text-align:center;
+    display:block;
+}
+
+
+
+.policyCol1
+{
+	width: 195px;
+	float: left;
+	text-align: left;
+	position: relative;
+	vertical-align: middle;
+	overflow: visible;
+	display:block;
+	padding:5px;
+}
+.policyCol2
+{
+    width: 200px;
+	float: left;
+	text-align: left;
+	position: relative;
+	margin-left: 44px;
+	vertical-align: middle;
+	overflow: visible;
+	display:block;
+	padding:5px;
+}
+.policyCol3
+{
+    width: 195px;
+	float: left;
+	text-align: left;
+	position: relative;
+	margin-left: 44px;
+	vertical-align: middle;
+	overflow: visible;
+	display:block;
+	padding:5px;
+}
+.policyCol4
+{
+    width: 200px;
+	float: left;
+	text-align: left;
+	position: relative;
+	margin-left: 44px;
+	vertical-align: middle;
+	overflow: visible;
+	display:block;
+	padding:5px;
+}
+.divGroupHeader
+{
+    color:#ffffff;
+    background-color:#3f6697;
+    padding-left:5px;
+}
+.divGroupItem
+{
+    background-color:#d2d8e8;
+    font-size:11pt;
+}
+
+/*Buyer Order > Assortment*/
+.divAssortmentContainer
+{ 
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    border-color:#d2d8e8;
+    border-style:solid;
+    border-width:3px;
+    overflow:auto;
+}
+
+/*Buyer Order > Packing*/
+.divPackContainer
+{ 
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    border-color:#d2d8e8;
+    border-style:solid;
+    border-width:3px;
+    overflow:auto;
+}
+
+
+.contenttext {
+	
+	font-size:small;
+	font-family: verdana;
+	border: solid 0px #e8eef4;
+	
+	
+/*	margin-top:10px; */
+	text-align:left;
+	
+}
+
+
+
+
+.rptcontenttext 
+{
+	font-size:small;
+	font-family: verdana;
+	border: solid 1px black;
+	
+	/* border: black 1px solid; */
+	
+	
+/*	margin-top:10px; */
+	text-align:left;
+}
+
+
+.rptrowdata
+{
+	
+	border: 1px solid  black;
+	font-family: Verdana;
+	padding:1px; 	
+}
+
+.rptrowheader
+{
+	
+	border: 1px solid  black;
+	text-align:center;
+	font: solid 10pt bold Verdana;	
+	padding:1px; 	
+}
+
+.rptrowdetails
+{
+	
+	border: 1px solid  black;
+	text-align:center;
+	font-size: 8pt;
+	font-family: Verdana;
+	padding:1px; 	
+}
+
+.rptAmountrowdetails
+{
+	
+	border: 1px solid  black;
+	text-align:right;
+	font-size: 8pt;
+	font-family: Verdana;
+	padding:1px; 	
+}
+
+.rptrowsection
+{
+    border-left:1px solid Black;	
+    border-right:1px solid Black;
+    border-bottom:1px solid Black;	
+	font-family: Verdana;	
+}
+
+

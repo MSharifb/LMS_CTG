@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{089F2FCA-D086-4C4A-9DF6-BEF0689F19A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LMSEntity</RootNamespace>
+    <AssemblyName>LMSEntity</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApprovalCaption.cs" />
+    <Compile Include="ApprovalFlow.cs" />
+    <Compile Include="ApprovalGroup.cs" />
+    <Compile Include="ApprovalPathMaster.cs" />
+    <Compile Include="ApprovalProcess.cs" />
+    <Compile Include="ApprovalReportAuthority.cs" />
+    <Compile Include="AttendanceReportForMobile.cs" />
+    <Compile Include="Att_tblRule.cs" />
+    <Compile Include="BillType.cs" />
+    <Compile Include="EmployeePhoto.cs" />
+    <Compile Include="CommonConfig.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="ApprovalAuthor.cs" />
+    <Compile Include="ApplicationStatusCaption.cs" />
+    <Compile Include="ApprovalPathDetails.cs" />
+    <Compile Include="AuthorType.cs" />
+    <Compile Include="ApprovalComments.cs" />
+    <Compile Include="ATT_tblAtdStatusSetup.cs" />
+    <Compile Include="BreakType.cs" />
+    <Compile Include="ATT_tblSetBreakTime.cs" />
+    <Compile Include="CompanyUnit.cs" />
+    <Compile Include="Conveyance.cs" />
+    <Compile Include="ConveyanceApproverDetails.cs" />
+    <Compile Include="ConveyanceDetails.cs" />
+    <Compile Include="CardInfo.cs" />
+    <Compile Include="CardAssign.cs" />
+    <Compile Include="ConveyanceMaster.cs" />
+    <Compile Include="AttendenceReport.cs" />
+    <Compile Include="ConveyanceReport.cs" />
+    <Compile Include="HolidayWeekDayDetails.cs" />
+    <Compile Include="HRPolicyTypeName.cs" />
+    <Compile Include="JobTypeName.cs" />
+    <Compile Include="LeaveYearMapping.cs" />
+    <Compile Include="LeaveYearType.cs" />
+    <Compile Include="MembershipTypeName.cs" />
+    <Compile Include="MiscellaneousReport.cs" />
+    <Compile Include="MobileIO.cs" />
+    <Compile Include="MyConveyanceDetails.cs" />
+    <Compile Include="MyConveyanceMaster.cs" />
+    <Compile Include="MISCApproval.cs" />
+    <Compile Include="MISCDetails.cs" />
+    <Compile Include="MiscellaneousVoucher.cs" />
+    <Compile Include="MISCMaster.cs" />
+    <Compile Include="OOALocationWiseComments.cs" />
+    <Compile Include="rptCompanyInformation.cs" />
+    <Compile Include="SearchLocation.cs" />
+    <Compile Include="SetOverTime.cs" />
+    <Compile Include="OOAApprovalComments.cs" />
+    <Compile Include="ShiftAssignment.cs" />
+    <Compile Include="HRMColumnMapping.cs" />
+    <Compile Include="HRMTableMapping.cs" />
+    <Compile Include="SkillTypeName.cs" />
+    <Compile Include="WeekendConfigure.cs" />
+    <Compile Include="WeekendHolidayWorkingHour.cs" />
+    <Compile Include="ManualIO.cs" />
+    <Compile Include="WeekendHolidayAsWorkingday.cs" />
+    <Compile Include="EmployeeWiseOOAApprovalPath.cs" />
+    <Compile Include="OfficeTimeDetails.cs" />
+    <Compile Include="OOAApprovalAuthor.cs" />
+    <Compile Include="OOAApprovalPathDetails.cs" />
+    <Compile Include="OOAApprovalPathMaster.cs" />
+    <Compile Include="OOAApprovalFlow.cs" />
+    <Compile Include="DataSynchronizer.cs" />
+    <Compile Include="EmployeeCategory.cs" />
+    <Compile Include="LeaveLedgerHistory.cs" />
+    <Compile Include="DataColumn.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="Designation.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeWiseApprovalPath.cs" />
+    <Compile Include="EmpPresentDays.cs" />
+    <Compile Include="EntityBase.cs" />
+    <Compile Include="HolidayWeekDay.cs" />
+    <Compile Include="HolidayWeekDayRule.cs" />
+    <Compile Include="HolidayWeekDayRuleChild.cs" />
+    <Compile Include="HolidayWeekendRuleAssign.cs" />
+    <Compile Include="LeaveApplication.cs" />
+    <Compile Include="LeaveEncasment.cs" />
+    <Compile Include="LeaveEntitlement.cs" />
+    <Compile Include="LeaveLedger.cs" />
+    <Compile Include="LeaveOpening.cs" />
+    <Compile Include="LeaveRule.cs" />
+    <Compile Include="LeaveRuleAssignment.cs" />
+    <Compile Include="LeaveType.cs" />
+    <Compile Include="LeaveYear.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="LoginDetails.cs" />
+    <Compile Include="OfficeTime.cs" />
+    <Compile Include="OutOfOffice.cs" />
+    <Compile Include="OutOfOfficeLocaton.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Religion.cs" />
+    <Compile Include="rptLeaveEncasment.cs" />
+    <Compile Include="rptLeaveEnjoyed.cs" />
+    <Compile Include="rptLeaveStatus.cs" />
+    <Compile Include="Shift.cs" />
+    <Compile Include="ValidationMessage.cs" />
+    <Compile Include="Zone.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

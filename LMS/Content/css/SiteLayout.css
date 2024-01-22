@@ -1,0 +1,186 @@
+﻿/*body
+{
+    background-color: #d2d8e8;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	font-family: Tahoma, Verdana, Sans-Serif;
+	font-size: 12px;
+	height: 100%;
+}*/
+
+body {
+    color: #474747;
+}
+
+.loginHeaderTop
+{
+    width:100%;
+    height:50px;
+    background-color:#FFFFFF;
+    background-image:  url(../../Content/img/logo/MGLogo.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.signOut
+{
+    background-repeat: no-repeat;
+    text-decoration:none;
+    color:#3f6697;
+}
+
+.loginHeaderBottom
+{
+    width:100%;
+    height:80px;
+    background-color:#3f6697;
+    background-image:  url(../../Content/img/logo/ProjectName.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.headerBottom
+{
+    width:100%;
+    height:50px;
+    background-color:#3f6697;
+    background-repeat: no-repeat;
+}
+.pageCaption
+{
+    font-family:Arial;
+    font-weight:bold;
+    font-size:18pt;
+    color:#ffffff;
+}
+.rigtMerginElement
+{
+    text-align:right;
+    padding-top:60px;
+    padding-right:20px;
+    color:#FFFFFF;
+}
+
+.headerRigtMerginElement
+{
+    text-align:right;
+    padding-top:30px;
+    padding-right:20px;
+    color:#FFFFFF;
+}
+
+.mainContainer
+{
+    padding-top:20px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.mainContent
+{
+	/*
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+    min-height:350px;
+    background-color:#f0f3f8;*/
+}
+
+.mainContentModal
+{
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+    min-height:350px;
+    background-color:White;
+}
+
+table td{
+    border: 1px solid #e8eef4;
+    padding: 5px;
+}
+
+/***************Footer***************/
+.footer
+{
+    height:100px;
+    background-color:#d2d8e8;
+}
+.footerContainer
+{
+    padding-left:20px;
+    padding-right:20px;
+}
+.footerTopContent
+{
+    background-color:#f0f3f8;
+    padding-left:30px;
+    padding-right:30px;
+}
+.footerTopContentElement
+{
+    height:30px;
+    color:#26476b;
+    background-color:#d2d8e8;
+    padding-left:30px;
+    padding-right:30px;
+}
+.footerBottomContent
+{
+    background-color:#d2d8e8;
+    padding-left:30px;
+    padding-right:30px;
+}
+.footerBottomContentElement
+{
+    height:30px;
+    background-color:#f0f3f8;
+    padding-left:30px;
+    padding-right:30px;
+}
+.poweredBy
+{
+    color:#8294ae;
+    font-weight:bold;
+    height:40px;
+    padding-top:5px;
+    padding-left:60px;
+    padding-right:60px;
+}
+.footerElements
+{
+    width:100%;
+    height:30px;
+    /*vertical-align:middle;*/
+    padding-top:8px;
+    /*display:table-cell;*/
+    color:#26476b;
+}
+/***************Footer***************/
+
+/***************HomeTable***************/
+table.home 
+{
+	border-width: 1px;
+	border-spacing: 2px;
+	border-style: solid;
+	border-color: #d2d8e8;
+	border-collapse: separate;
+}
+table.home th 
+{
+	border-width: 1px;
+	padding: 0px;
+	border-style: solid;
+	border-color: #d2d8e8;
+	background-color: white;
+}
+table.home td 
+{
+	border-width: 1px;
+	padding: 0px;
+	border-style: solid;
+	border-color: #d2d8e8;
+}
+/***************HomeTable***************/

@@ -1,0 +1,13 @@
+﻿LMS_tblApplicationStatusCaption
+
+1	Approved	Backward	1	sarker	NULL	5/2/2010 2:19:57 PM	NULL
+2	Cancel	Backward	1	sarker	NULL	5/2/2010 2:21:03 PM	NULL
+3	Reject	Backward	1	sarker	NULL	5/2/2010 2:21:22 PM	NULL
+4	Recommend	Forward	1	sarker	NULL	5/2/2010 2:21:51 PM	NULL
+6	Submit	Forward	1	sarker	NULL	5/19/2010 9:51:33 AM	NULL
+NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL
+
+LMS_tblAuthorType
+1	Approval	100	sarker	NULL	5/2/2010 2:23:34 PM	NULL
+2	Recommendation	100	NULL	NULL	5/2/2010 2:24:33 PM	NULL
+NULL	NULL	NULL	NULL	NULL	NULL	NULLd

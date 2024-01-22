@@ -1,0 +1,21 @@
+DIV.time-picker {
+	Z-INDEX: 99; BORDER-BOTTOM: #000 1px solid; POSITION: absolute; BORDER-LEFT: #000 1px solid; WIDTH: 5em; BACKGROUND: #fff; HEIGHT: 200px; OVERFLOW: auto; BORDER-TOP: #000 1px solid; BORDER-RIGHT: #000 1px solid
+}
+DIV.time-picker-12hours {
+	WIDTH: 6em
+}
+DIV.time-picker UL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DIV.time-picker LI {
+	PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; CURSOR: pointer; PADDING-TOP: 1px
+}
+DIV.time-picker LI.selected {
+	BACKGROUND: #316ac5; COLOR: #fff
+}
+
+.ui-timepicker-div .ui-widget-header{ margin-bottom: 8px; }
+.ui-timepicker-div dl{ text-align: left; }
+.ui-timepicker-div dl dt{ height: 25px; }
+.ui-timepicker-div dl dd{ margin: -25px 0 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }

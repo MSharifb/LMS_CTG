@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Logon.master.cs" Inherits="LMS.Web.Views.Shared.Logon" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<%--<link href="<%=ResolveUrl("~")%>Content/css/Site.css" rel="stylesheet" type="text/css" />--%>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+
+    <link href="<%= ResolveUrl("~/Content/css/Site.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= ResolveUrl("~/Content/css/ComponentStyle.css") %>" rel="stylesheet" type="text/css" />
+
+    <style type="text/css" >
+        
+        body 
+        { 
+            font-size: .7em; 
+            font-family: Verdana, Helvetica, Sans-Serif; 
+            margin: 0 0 20px 0; 
+            padding: 0; 
+            color: #474747; 
+            background:#5c87b2;
+        }
+        
+        a:link
+        { 
+            color: #034af3;
+            text-decoration: underline; 
+        }
+        
+        a:visited 
+        { 
+            color: #505abc; 
+        }
+        
+        a:hover 
+        { 
+            color: #1d60ff; 
+            text-decoration: none; 
+        }
+        
+        a:active 
+        { 
+            color: #12eb87; 
+        }
+        
+        p, ul 
+        { 
+            margin-bottom: 20px; 
+            line-height: 1.6em; 
+        }
+        
+        a 
+        {
+            outline:none
+        }
+
+        img 
+        {
+            border:none;
+        }
+        
+        
+        
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server" autocomplete="off">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolderLogon" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
+

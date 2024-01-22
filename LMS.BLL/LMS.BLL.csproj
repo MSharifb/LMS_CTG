@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C34AB4F-BC33-4B62-BBCA-6E66B4903A6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LMS.BLL</RootNamespace>
+    <AssemblyName>LMS.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationStatusBLL.cs" />
+    <Compile Include="ApprovalGroupBLL.cs" />
+    <Compile Include="ApprovalProcessBLL.cs" />
+    <Compile Include="CommonConfigBLL.cs" />
+    <Compile Include="CompanyBLL.cs" />
+    <Compile Include="ApprovalPathBLL.cs" />
+    <Compile Include="AuthorTypeBLL.cs" />
+    <Compile Include="ApprovalAuthorBLL.cs" />
+    <Compile Include="ApprovalFlowBLL.cs" />
+    <Compile Include="ApprovalCommentsGet.cs" />
+    <Compile Include="AttRuleBLL.cs" />
+    <Compile Include="ATT_AtdStatusSetupBLL.cs" />
+    <Compile Include="BreakTypeBLL.cs" />
+    <Compile Include="BreakTimeSetupBLL.cs" />
+    <Compile Include="CompanyUnitBLL.cs" />
+    <Compile Include="ConveyanceBLL.cs" />
+    <Compile Include="CardInfoBLL.cs" />
+    <Compile Include="CardAssignBLL.cs" />
+    <Compile Include="AttendanceReportBLL.cs" />
+    <Compile Include="ConveyanceReportBLL.cs" />
+    <Compile Include="EmployeePhotoBLL.cs" />
+    <Compile Include="HolidayWeekDayDetailsBLL.cs" />
+    <Compile Include="HRPolicyTypeNameBLL.cs" />
+    <Compile Include="ImportAttendRawDataBLL.cs" />
+    <Compile Include="JobTypeNameBLL.cs" />
+    <Compile Include="LeaveYearMappingBLL.cs" />
+    <Compile Include="LeaveYearTypeBLL.cs" />
+    <Compile Include="MembershipTypeNameBLL.cs" />
+    <Compile Include="MISCApprovalBLL.cs" />
+    <Compile Include="MISCBLL.cs" />
+    <Compile Include="MiscellaneousReportBLL.cs" />
+    <Compile Include="MiscellaneousVoucherBLL.cs" />
+    <Compile Include="MyConveyanceBLL.cs" />
+    <Compile Include="OOALocationWiseCommentsBLL.cs" />
+    <Compile Include="SetOverTimeBLL.cs" />
+    <Compile Include="OOAApprovalCommentsBLL.cs" />
+    <Compile Include="ShiftAssignmentBLL.cs" />
+    <Compile Include="HRMColumnMappingBLL.cs" />
+    <Compile Include="HRMTableMappingBLL.cs" />
+    <Compile Include="OOAAuthorTypeBLL.cs" />
+    <Compile Include="SkillTypeNameBLL.cs" />
+    <Compile Include="WeekendHolidayWorkingHourBLL.cs" />
+    <Compile Include="ManualIOBLL.cs" />
+    <Compile Include="WeekendHolidayAsWorkingdayBLL.cs" />
+    <Compile Include="OOAApprovalAuthorBLL.cs" />
+    <Compile Include="OOAApprovalFlowBLL.cs" />
+    <Compile Include="OOAApprovalPathBLL.cs" />
+    <Compile Include="EmployeeWiseOOAApprovalPathBLL.cs" />
+    <Compile Include="DataSynchronizerBAL.cs" />
+    <Compile Include="EmployeeCategoryBLL.cs" />
+    <Compile Include="EmployeeWiseApprovalPathBLL.cs" />
+    <Compile Include="LeaveApplicationBLL.cs" />
+    <Compile Include="EmployeeBLL.cs" />
+    <Compile Include="HolidayWeekDayRuleBLL.cs" />
+    <Compile Include="HolidayWeekDayRuleChildBLL.cs" />
+    <Compile Include="HolidayWeekendRuleAssignBLL.cs" />
+    <Compile Include="LeaveApplicationValidationBLL.cs" />
+    <Compile Include="LeaveEncasmentBLL.cs" />
+    <Compile Include="LeaveEntitlementBLL.cs" />
+    <Compile Include="LeaveLedgerBLL.cs" />
+    <Compile Include="LeaveOpeningBLL.cs" />
+    <Compile Include="LeaveRuleAssignmentBLL.cs" />
+    <Compile Include="HolidayWeekDayBLL.cs" />
+    <Compile Include="LeaveRuleBLL.cs" />
+    <Compile Include="LeaveTypeBLL.cs" />
+    <Compile Include="LocationBLL.cs" />
+    <Compile Include="DesignationBLL.cs" />
+    <Compile Include="DepartmentBLL.cs" />
+    <Compile Include="LeaveYearBLL.cs" />
+    <Compile Include="LoginDetailsBLL.cs" />
+    <Compile Include="OfficeTimeBLL.cs" />
+    <Compile Include="OOAApprovalProcessBLL.cs" />
+    <Compile Include="OutOfOfficeBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReligionBLL.cs" />
+    <Compile Include="ReportsBLL.cs" />
+    <Compile Include="ShiftBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LMS.DAL\LMS.DAL.csproj">
+      <Project>{3DF6372E-40BB-4B35-BFAD-A86991CF327B}</Project>
+      <Name>LMS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LMSEntity\LMSEntity.csproj">
+      <Project>{089F2FCA-D086-4C4A-9DF6-BEF0689F19A6}</Project>
+      <Name>LMSEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TVL.DB\TVL.DB.csproj">
+      <Project>{8390DDE2-A1E8-4539-B88A-5DBA117DB0D7}</Project>
+      <Name>TVL.DB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
